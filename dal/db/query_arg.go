@@ -28,7 +28,7 @@ func (p *QueryArg) MustEqual(key string, column string) *QueryArg  {
 
 func (p *QueryArg) equal(key string, column string) error {
 	val, ok := p.ParamsMap[key]
-	if !ok {
+	if !ok || val[0] == ""{
 		return fmt.Errorf("need request param %v", key)
 	}
 	p.argKey = append(p.argKey, fmt.Sprintf("%v = ?", column))
@@ -49,7 +49,7 @@ func (p *QueryArg) MustLike(key string, column string)  *QueryArg {
 
 func (p *QueryArg) like(key string, column string) error {
 	val, ok := p.ParamsMap[key]
-	if !ok {
+	if !ok || val[0] == "" {
 		return fmt.Errorf("need request param %v", key)
 	}
 	p.argKey = append(p.argKey, fmt.Sprintf("%v like ?", "%"+column+"%"))
@@ -70,7 +70,7 @@ func (p *QueryArg) MustEqualInt(key string, column string) *QueryArg  {
 
 func (p *QueryArg) equalInt(key string, column string) error {
 	val, ok := p.ParamsMap[key]
-	if !ok {
+	if !ok || val[0] == "" {
 		return fmt.Errorf("need request param %v", key)
 	}
 	valInt,err := strconv.Atoi(val[0])
@@ -95,7 +95,7 @@ func (p *QueryArg) MustEqualFloat64(key string, column string) *QueryArg  {
 
 func (p *QueryArg) equalFloat64(key string, column string) error {
 	val, ok := p.ParamsMap[key]
-	if !ok {
+	if !ok || val[0] == "" {
 		return fmt.Errorf("need request param %v", key)
 	}
 	valFloat,err := strconv.ParseFloat(val[0],64)

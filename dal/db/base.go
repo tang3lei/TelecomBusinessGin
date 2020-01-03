@@ -27,8 +27,7 @@ func (p *Base) runtime() *gorm.DB {
 }
 
 func (p *Base) Get(base model.Item, out interface{}) error {
-	p.runtime().Where("id = ?", base.GetID()).First(out)
-	return p.runtime().Error
+	return p.runtime().Where("id = ?", base.GetID()).First(out).Error
 }
 
 func (p *Base) ApplyQuery(arg *QueryArg, out interface{}) error {
@@ -41,18 +40,21 @@ func (p *Base) ApplyQuery(arg *QueryArg, out interface{}) error {
 	runtime = runtime.Offset(arg.Offset)
 	runtime = runtime.Find(out)
 
-	return p.runtime().Error
+	return runtime.Error
 }
 
 func (p *Base) Create(val model.Item) error {
 	runtime := p.runtime().Table(p.tablename)
-
 	runtime = runtime.Create(val)
-	return p.runtime().Error
+	return runtime.Error
 }
 
 func (p *Base) Update(val model.Item) error {
-	runtime := p.runtime().Table(p.tablename).Model(val).Omit("id").Where("id = ?", val.GetID())
+	runtime := p.runtime().Table(p.tablename).Model(val).Omit(val.Omit()...).Where("id = ?", val.GetID())
 	runtime = runtime.Updates(val)
-	return p.runtime().Error
+	return runtime.Error
+}
+
+func (p *Base) Delete(val model.Item) error {
+	return p.runtime().Table(p.tablename).Model(val).Where("id = ?",val.GetID()).Delete(val).Error
 }

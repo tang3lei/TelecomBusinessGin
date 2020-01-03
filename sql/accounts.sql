@@ -2,6 +2,8 @@ create table accounts
 (
     id           int           not null identity (1,1),
     phone_number VARCHAR(20)   not null,
+    user_name    NVARCHAR(20),
+    status       int           not null default 0,
     balance      float         not null DEFAULT 0,
     package      NVARCHAR(128) not NULL,
     info         text,
