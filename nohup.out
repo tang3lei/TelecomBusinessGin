@@ -264,3 +264,565 @@ time="2020-01-02T08:14:56+08:00" level=info msg="suc resp" data="[{{1 2019-12-30
 [GIN-debug] POST   /api/package/list         --> upc.edu.cn/telecom_business/telecom_business_api/view.ListPackage (4 handlers)
 [GIN-debug] Environment variable PORT is undefined. Using port :8080 by default
 [GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/01/03 - 17:27:46 | 404 |       5.349µs |   197.44.138.98 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 17:32:23 | 204 |      43.012µs |   123.168.74.60 | OPTIONS  /api/employee/login
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/employee.go:14)[0m 
+[33m[2020-01-03 17:32:23][0m  [36;1m[36.69ms][0m  SELECT * FROM [employees]  WHERE (name = 'baiyou') ORDER BY [employees].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY  
+[36;31m[1 rows affected or returned ][0m 
+time="2020-01-03T17:32:23+08:00" level=info msg="suc resp" data=suc
+[GIN] 2020/01/03 - 17:32:23 | 200 |   37.056485ms |   123.168.74.60 | POST     /api/employee/login
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 17:32:23][0m  [36;1m[36.49ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[3 rows affected or returned ][0m 
+time="2020-01-03T17:32:23+08:00" level=info msg="suc resp" data="[{{36 2020-01-03 16:09:13.863 +0000 UTC 2020-01-03 16:16:36.83 +0000 UTC} 1000000 gebilaowang 1 175 基础套餐01  } {{37 2020-01-03 16:09:34.327 +0000 UTC 2020-01-03 16:11:58.04 +0000 UTC} 1220022 植物 1 55 基础套餐01  } {{38 2020-01-03 16:09:59.15 +0000 UTC 2020-01-03 16:12:04.513 +0000 UTC} 7776543 阿苏斯 1 500 基础套餐01  }]"
+[GIN] 2020/01/03 - 17:32:23 | 200 |   36.890068ms |   123.168.74.60 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 17:32:25][0m  [36;1m[36.39ms][0m  SELECT * FROM [packages]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[2 rows affected or returned ][0m 
+time="2020-01-03T17:32:25+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:08:34.437 +0000 UTC 2020-01-03 16:08:34.437 +0000 UTC} 基础套餐01 1 10 0 desc} {{2 2020-01-03 16:08:51.357 +0000 UTC 2020-01-03 16:08:51.357 +0000 UTC} 增值套餐01 2 0 10 desc}]"
+[GIN] 2020/01/03 - 17:32:25 | 200 |   36.597679ms |   123.168.74.60 | POST     /api/package/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 17:32:27][0m  [36;1m[36.69ms][0m  SELECT * FROM [deals]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[10 rows affected or returned ][0m 
+time="2020-01-03T17:32:27+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:10:07.153 +0000 UTC 2020-01-03 16:10:07.153 +0000 UTC} 余额充值 1578039007 1000000 xielei -1 50} {{2 2020-01-03 16:10:09.773 +0000 UTC 2020-01-03 16:10:09.773 +0000 UTC} 流量缴费 1578039009 1000000 xielei 2 -20} {{3 2020-01-03 16:10:15.397 +0000 UTC 2020-01-03 16:10:15.397 +0000 UTC} 余额充值 1578039015 1220022 xielei -1 100} {{4 2020-01-03 16:10:17.213 +0000 UTC 2020-01-03 16:10:17.213 +0000 UTC} 宽带缴费 1578039017 1220022 xielei 1 -245} {{5 2020-01-03 16:10:27.093 +0000 UTC 2020-01-03 16:10:27.093 +0000 UTC} 宽带缴费 1578039027 7776543 xielei 1 -450} {{6 2020-01-03 16:11:58.027 +0000 UTC 2020-01-03 16:11:58.027 +0000 UTC} 流量缴费 1578039118 1220022 baiyou 2 -20} {{7 2020-01-03 16:12:04.5 +0000 UTC 2020-01-03 16:12:04.5 +0000 UTC} 流量缴费 1578039124 7776543 baiyou 2 -50} {{8 2020-01-03 16:14:52.937 +0000 UTC 2020-01-03 16:14:52.937 +0000 UTC} 宽带缴费 1578039292 1000000 baiyou 1 -450} {{9 2020-01-03 16:15:22.187 +0000 UTC 2020-01-03 16:15:22.187 +0000 UTC} 流量缴费 1578039322 1000000 baiyou 2 -5} {{10 2020-01-03 16:16:36.843 +0000 UTC 2020-01-03 16:16:36.843 +0000 UTC} 余额充值 1578039396 1000000 baiyou -1 500}]"
+[GIN] 2020/01/03 - 17:32:27 | 200 |   37.063499ms |   123.168.74.60 | GET      /api/deal/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 17:32:31][0m  [36;1m[36.44ms][0m  SELECT * FROM [packages]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[2 rows affected or returned ][0m 
+time="2020-01-03T17:32:31+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:08:34.437 +0000 UTC 2020-01-03 16:08:34.437 +0000 UTC} 基础套餐01 1 10 0 desc} {{2 2020-01-03 16:08:51.357 +0000 UTC 2020-01-03 16:08:51.357 +0000 UTC} 增值套餐01 2 0 10 desc}]"
+[GIN] 2020/01/03 - 17:32:31 | 200 |   36.695722ms |   123.168.74.60 | POST     /api/package/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/deal.go:24)[0m 
+[33m[2020-01-03 17:32:50][0m  [36;1m[36.61ms][0m  SELECT * FROM [deals]  WHERE (create_at >= '2019-12-27 00:00:00') AND (create_at <= '2020-01-04 00:00:00')  
+[36;31m[10 rows affected or returned ][0m 
+time="2020-01-03T17:32:50+08:00" level=info msg="suc resp" data="map[baiyou:[{{6 2020-01-03 16:11:58.027 +0000 UTC 2020-01-03 16:11:58.027 +0000 UTC} 流量缴费 1578039118 1220022 baiyou 2 -20} {{7 2020-01-03 16:12:04.5 +0000 UTC 2020-01-03 16:12:04.5 +0000 UTC} 流量缴费 1578039124 7776543 baiyou 2 -50} {{8 2020-01-03 16:14:52.937 +0000 UTC 2020-01-03 16:14:52.937 +0000 UTC} 宽带缴费 1578039292 1000000 baiyou 1 -450} {{9 2020-01-03 16:15:22.187 +0000 UTC 2020-01-03 16:15:22.187 +0000 UTC} 流量缴费 1578039322 1000000 baiyou 2 -5} {{10 2020-01-03 16:16:36.843 +0000 UTC 2020-01-03 16:16:36.843 +0000 UTC} 余额充值 1578039396 1000000 baiyou -1 500}] xielei:[{{1 2020-01-03 16:10:07.153 +0000 UTC 2020-01-03 16:10:07.153 +0000 UTC} 余额充值 1578039007 1000000 xielei -1 50} {{2 2020-01-03 16:10:09.773 +0000 UTC 2020-01-03 16:10:09.773 +0000 UTC} 流量缴费 1578039009 1000000 xielei 2 -20} {{3 2020-01-03 16:10:15.397 +0000 UTC 2020-01-03 16:10:15.397 +0000 UTC} 余额充值 1578039015 1220022 xielei -1 100} {{4 2020-01-03 16:10:17.213 +0000 UTC 2020-01-03 16:10:17.213 +0000 UTC} 宽带缴费 1578039017 1220022 xielei 1 -245} {{5 2020-01-03 16:10:27.093 +0000 UTC 2020-01-03 16:10:27.093 +0000 UTC} 宽带缴费 1578039027 7776543 xielei 1 -450}]]"
+[GIN] 2020/01/03 - 17:32:50 | 200 |   36.971241ms |   123.168.74.60 | GET      /api/deal/daily?begin_daily=2019-12-27&end_daily=2020-01-03
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/deal.go:24)[0m 
+[33m[2020-01-03 17:33:04][0m  [36;1m[36.70ms][0m  SELECT * FROM [deals]  WHERE (create_at >= '2019-12-27 00:00:00') AND (create_at <= '2020-01-04 00:00:00')  
+[36;31m[10 rows affected or returned ][0m 
+adasadasdad
+adasadasdad
+time="2020-01-03T17:33:04+08:00" level=info msg="suc resp" data="map[ca:[2019-12-27 2019-12-28 2019-12-29 2019-12-30 2019-12-31 2020-01-01 2020-01-02 2020-01-03] srls:[{1000000 line [0 0 0 0 0 0 0 500]} {1220022 line [0 0 0 0 0 0 0 -20]} {7776543 line [0 0 0 0 0 0 0 -50]}]]"
+[GIN] 2020/01/03 - 17:33:04 | 200 |   36.981313ms |   123.168.74.60 | GET      /api/deal/user?begin_daily=2019-12-27&end_daily=2020-01-03
+[GIN] 2020/01/03 - 17:42:36 | 404 |       4.893µs |  35.242.136.169 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 18:00:55 | 404 |      48.034µs |  35.189.120.241 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 18:05:55 | 404 |       7.377µs |  35.246.231.156 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 18:46:23 | 404 |       5.729µs |     60.174.2.55 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 18:50:45 | 404 |       5.868µs | 128.199.153.236 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 18:58:51 | 404 |       4.315µs |   47.100.111.30 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 19:27:42 | 404 |       6.545µs |  198.108.66.112 | GET      /
+[GIN] 2020/01/03 - 19:37:06 | 404 |       5.188µs |   167.86.74.178 | GET      /001565123456.cfg
+[GIN] 2020/01/03 - 19:45:25 | 404 |       4.403µs |   34.77.138.167 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 19:50:54 | 404 |       5.858µs | 183.193.234.162 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 19:54:38 | 404 |        5.65µs |   185.132.53.18 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 19:58:51 | 404 |       5.279µs |   66.45.225.232 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 20:12:14 | 404 |       4.996µs | 183.192.240.120 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 20:12:39 | 404 |       6.295µs |    74.63.227.26 | HEAD     /robots.txt
+[GIN] 2020/01/03 - 20:20:28 | 404 |       4.097µs |    35.246.21.67 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 20:26:46 | 404 |       5.597µs |  165.22.117.165 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 20:26:47 | 404 |       4.804µs |  165.22.117.165 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 20:46:41 | 404 |       4.162µs |  112.162.42.134 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 20:46:45 | 404 |       5.162µs |  112.162.42.134 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 20:53:25 | 404 |       6.707µs |    92.112.1.209 | GET      /
+[GIN] 2020/01/03 - 20:59:26 | 404 |       4.444µs | 223.244.236.232 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 21:04:25 | 404 |       5.907µs |     34.89.47.44 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 21:12:05 | 204 |       30.82µs |   123.168.74.60 | OPTIONS  /api/employee/login
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/employee.go:14)[0m 
+[33m[2020-01-03 21:12:05][0m  [36;1m[36.44ms][0m  SELECT * FROM [employees]  WHERE (name = 'baiyou') ORDER BY [employees].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY  
+[36;31m[1 rows affected or returned ][0m 
+time="2020-01-03T21:12:05+08:00" level=info msg="suc resp" data=suc
+[GIN] 2020/01/03 - 21:12:05 | 200 |   36.630082ms |   123.168.74.60 | POST     /api/employee/login
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:12:05][0m  [36;1m[36.62ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[3 rows affected or returned ][0m 
+time="2020-01-03T21:12:05+08:00" level=info msg="suc resp" data="[{{36 2020-01-03 16:09:13.863 +0000 UTC 2020-01-03 16:16:36.83 +0000 UTC} 1000000 gebilaowang 1 175 基础套餐01  } {{37 2020-01-03 16:09:34.327 +0000 UTC 2020-01-03 16:11:58.04 +0000 UTC} 1220022 植物 1 55 基础套餐01  } {{38 2020-01-03 16:09:59.15 +0000 UTC 2020-01-03 16:12:04.513 +0000 UTC} 7776543 阿苏斯 1 500 基础套餐01  }]"
+[GIN] 2020/01/03 - 21:12:05 | 200 |   36.914849ms |   123.168.74.60 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:12:18][0m  [36;1m[36.47ms][0m  SELECT * FROM [deals]  WHERE (phone_number = '1000000') ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[5 rows affected or returned ][0m 
+time="2020-01-03T21:12:18+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:10:07.153 +0000 UTC 2020-01-03 16:10:07.153 +0000 UTC} 余额充值 1578039007 1000000 xielei -1 50} {{2 2020-01-03 16:10:09.773 +0000 UTC 2020-01-03 16:10:09.773 +0000 UTC} 流量缴费 1578039009 1000000 xielei 2 -20} {{8 2020-01-03 16:14:52.937 +0000 UTC 2020-01-03 16:14:52.937 +0000 UTC} 宽带缴费 1578039292 1000000 baiyou 1 -450} {{9 2020-01-03 16:15:22.187 +0000 UTC 2020-01-03 16:15:22.187 +0000 UTC} 流量缴费 1578039322 1000000 baiyou 2 -5} {{10 2020-01-03 16:16:36.843 +0000 UTC 2020-01-03 16:16:36.843 +0000 UTC} 余额充值 1578039396 1000000 baiyou -1 500}]"
+[GIN] 2020/01/03 - 21:12:18 | 200 |    36.70193ms |   123.168.74.60 | GET      /api/deal/list?id=36&create_at=2020-01-03T16:09:13.863Z&update_at=2020-01-03T16:16:36.83Z&phone_number=1000000&user_name=gebilaowang&status=1&balance=175&package=%E5%9F%BA%E7%A1%80%E5%A5%97%E9%A4%9001&info=&desc2=
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:12:19][0m  [36;1m[36.40ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[3 rows affected or returned ][0m 
+time="2020-01-03T21:12:19+08:00" level=info msg="suc resp" data="[{{36 2020-01-03 16:09:13.863 +0000 UTC 2020-01-03 16:16:36.83 +0000 UTC} 1000000 gebilaowang 1 175 基础套餐01  } {{37 2020-01-03 16:09:34.327 +0000 UTC 2020-01-03 16:11:58.04 +0000 UTC} 1220022 植物 1 55 基础套餐01  } {{38 2020-01-03 16:09:59.15 +0000 UTC 2020-01-03 16:12:04.513 +0000 UTC} 7776543 阿苏斯 1 500 基础套餐01  }]"
+[GIN] 2020/01/03 - 21:12:19 | 200 |   36.692757ms |   123.168.74.60 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:12:21][0m  [36;1m[36.73ms][0m  SELECT * FROM [deals]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[10 rows affected or returned ][0m 
+time="2020-01-03T21:12:21+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:10:07.153 +0000 UTC 2020-01-03 16:10:07.153 +0000 UTC} 余额充值 1578039007 1000000 xielei -1 50} {{2 2020-01-03 16:10:09.773 +0000 UTC 2020-01-03 16:10:09.773 +0000 UTC} 流量缴费 1578039009 1000000 xielei 2 -20} {{3 2020-01-03 16:10:15.397 +0000 UTC 2020-01-03 16:10:15.397 +0000 UTC} 余额充值 1578039015 1220022 xielei -1 100} {{4 2020-01-03 16:10:17.213 +0000 UTC 2020-01-03 16:10:17.213 +0000 UTC} 宽带缴费 1578039017 1220022 xielei 1 -245} {{5 2020-01-03 16:10:27.093 +0000 UTC 2020-01-03 16:10:27.093 +0000 UTC} 宽带缴费 1578039027 7776543 xielei 1 -450} {{6 2020-01-03 16:11:58.027 +0000 UTC 2020-01-03 16:11:58.027 +0000 UTC} 流量缴费 1578039118 1220022 baiyou 2 -20} {{7 2020-01-03 16:12:04.5 +0000 UTC 2020-01-03 16:12:04.5 +0000 UTC} 流量缴费 1578039124 7776543 baiyou 2 -50} {{8 2020-01-03 16:14:52.937 +0000 UTC 2020-01-03 16:14:52.937 +0000 UTC} 宽带缴费 1578039292 1000000 baiyou 1 -450} {{9 2020-01-03 16:15:22.187 +0000 UTC 2020-01-03 16:15:22.187 +0000 UTC} 流量缴费 1578039322 1000000 baiyou 2 -5} {{10 2020-01-03 16:16:36.843 +0000 UTC 2020-01-03 16:16:36.843 +0000 UTC} 余额充值 1578039396 1000000 baiyou -1 500}]"
+[GIN] 2020/01/03 - 21:12:21 | 200 |   37.148683ms |   123.168.74.60 | GET      /api/deal/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:12:23][0m  [36;1m[36.64ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[3 rows affected or returned ][0m 
+time="2020-01-03T21:12:23+08:00" level=info msg="suc resp" data="[{{36 2020-01-03 16:09:13.863 +0000 UTC 2020-01-03 16:16:36.83 +0000 UTC} 1000000 gebilaowang 1 175 基础套餐01  } {{37 2020-01-03 16:09:34.327 +0000 UTC 2020-01-03 16:11:58.04 +0000 UTC} 1220022 植物 1 55 基础套餐01  } {{38 2020-01-03 16:09:59.15 +0000 UTC 2020-01-03 16:12:04.513 +0000 UTC} 7776543 阿苏斯 1 500 基础套餐01  }]"
+[GIN] 2020/01/03 - 21:12:23 | 200 |   36.917125ms |   123.168.74.60 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:12:31][0m  [36;1m[36.73ms][0m  SELECT * FROM [deals]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[10 rows affected or returned ][0m 
+time="2020-01-03T21:12:31+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:10:07.153 +0000 UTC 2020-01-03 16:10:07.153 +0000 UTC} 余额充值 1578039007 1000000 xielei -1 50} {{2 2020-01-03 16:10:09.773 +0000 UTC 2020-01-03 16:10:09.773 +0000 UTC} 流量缴费 1578039009 1000000 xielei 2 -20} {{3 2020-01-03 16:10:15.397 +0000 UTC 2020-01-03 16:10:15.397 +0000 UTC} 余额充值 1578039015 1220022 xielei -1 100} {{4 2020-01-03 16:10:17.213 +0000 UTC 2020-01-03 16:10:17.213 +0000 UTC} 宽带缴费 1578039017 1220022 xielei 1 -245} {{5 2020-01-03 16:10:27.093 +0000 UTC 2020-01-03 16:10:27.093 +0000 UTC} 宽带缴费 1578039027 7776543 xielei 1 -450} {{6 2020-01-03 16:11:58.027 +0000 UTC 2020-01-03 16:11:58.027 +0000 UTC} 流量缴费 1578039118 1220022 baiyou 2 -20} {{7 2020-01-03 16:12:04.5 +0000 UTC 2020-01-03 16:12:04.5 +0000 UTC} 流量缴费 1578039124 7776543 baiyou 2 -50} {{8 2020-01-03 16:14:52.937 +0000 UTC 2020-01-03 16:14:52.937 +0000 UTC} 宽带缴费 1578039292 1000000 baiyou 1 -450} {{9 2020-01-03 16:15:22.187 +0000 UTC 2020-01-03 16:15:22.187 +0000 UTC} 流量缴费 1578039322 1000000 baiyou 2 -5} {{10 2020-01-03 16:16:36.843 +0000 UTC 2020-01-03 16:16:36.843 +0000 UTC} 余额充值 1578039396 1000000 baiyou -1 500}]"
+[GIN] 2020/01/03 - 21:12:31 | 200 |   37.162039ms |   123.168.74.60 | GET      /api/deal/list
+[GIN] 2020/01/03 - 21:12:39 | 404 |       5.806µs |   35.205.70.222 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 21:12:39 | 404 |         5.2µs |   35.205.70.222 | POST     /cgi-bin/ViewLog.asp
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:12:41][0m  [36;1m[36.52ms][0m  SELECT * FROM [packages]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[2 rows affected or returned ][0m 
+time="2020-01-03T21:12:41+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:08:34.437 +0000 UTC 2020-01-03 16:08:34.437 +0000 UTC} 基础套餐01 1 10 0 desc} {{2 2020-01-03 16:08:51.357 +0000 UTC 2020-01-03 16:08:51.357 +0000 UTC} 增值套餐01 2 0 10 desc}]"
+[GIN] 2020/01/03 - 21:12:41 | 200 |   36.757613ms |   123.168.74.60 | POST     /api/package/list
+[GIN] 2020/01/03 - 21:12:42 | 404 |        5.85µs |   35.205.70.222 | POST     /cgi-bin/ViewLog.asp
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/deal.go:24)[0m 
+[33m[2020-01-03 21:12:54][0m  [36;1m[36.78ms][0m  SELECT * FROM [deals]  WHERE (create_at >= '2019-07-01 00:00:00') AND (create_at <= '2020-02-01 00:00:00')  
+[36;31m[10 rows affected or returned ][0m 
+time="2020-01-03T21:12:54+08:00" level=info msg="suc resp" data="map[1:[{{4 2020-01-03 16:10:17.213 +0000 UTC 2020-01-03 16:10:17.213 +0000 UTC} 宽带缴费 1578039017 1220022 xielei 1 -245} {{5 2020-01-03 16:10:27.093 +0000 UTC 2020-01-03 16:10:27.093 +0000 UTC} 宽带缴费 1578039027 7776543 xielei 1 -450} {{8 2020-01-03 16:14:52.937 +0000 UTC 2020-01-03 16:14:52.937 +0000 UTC} 宽带缴费 1578039292 1000000 baiyou 1 -450}] 2:[{{2 2020-01-03 16:10:09.773 +0000 UTC 2020-01-03 16:10:09.773 +0000 UTC} 流量缴费 1578039009 1000000 xielei 2 -20} {{6 2020-01-03 16:11:58.027 +0000 UTC 2020-01-03 16:11:58.027 +0000 UTC} 流量缴费 1578039118 1220022 baiyou 2 -20} {{7 2020-01-03 16:12:04.5 +0000 UTC 2020-01-03 16:12:04.5 +0000 UTC} 流量缴费 1578039124 7776543 baiyou 2 -50} {{9 2020-01-03 16:15:22.187 +0000 UTC 2020-01-03 16:15:22.187 +0000 UTC} 流量缴费 1578039322 1000000 baiyou 2 -5}]]"
+[GIN] 2020/01/03 - 21:12:54 | 200 |   37.107041ms |   123.168.74.60 | GET      /api/deal/month?begin_month=2019-07&end_month=2020-01
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/deal.go:24)[0m 
+[33m[2020-01-03 21:13:09][0m  [36;1m[36.76ms][0m  SELECT * FROM [deals]  WHERE (create_at >= '2019-12-27 00:00:00') AND (create_at <= '2020-01-04 00:00:00')  
+[36;31m[10 rows affected or returned ][0m 
+time="2020-01-03T21:13:09+08:00" level=info msg="suc resp" data="map[baiyou:[{{6 2020-01-03 16:11:58.027 +0000 UTC 2020-01-03 16:11:58.027 +0000 UTC} 流量缴费 1578039118 1220022 baiyou 2 -20} {{7 2020-01-03 16:12:04.5 +0000 UTC 2020-01-03 16:12:04.5 +0000 UTC} 流量缴费 1578039124 7776543 baiyou 2 -50} {{8 2020-01-03 16:14:52.937 +0000 UTC 2020-01-03 16:14:52.937 +0000 UTC} 宽带缴费 1578039292 1000000 baiyou 1 -450} {{9 2020-01-03 16:15:22.187 +0000 UTC 2020-01-03 16:15:22.187 +0000 UTC} 流量缴费 1578039322 1000000 baiyou 2 -5} {{10 2020-01-03 16:16:36.843 +0000 UTC 2020-01-03 16:16:36.843 +0000 UTC} 余额充值 1578039396 1000000 baiyou -1 500}] xielei:[{{1 2020-01-03 16:10:07.153 +0000 UTC 2020-01-03 16:10:07.153 +0000 UTC} 余额充值 1578039007 1000000 xielei -1 50} {{2 2020-01-03 16:10:09.773 +0000 UTC 2020-01-03 16:10:09.773 +0000 UTC} 流量缴费 1578039009 1000000 xielei 2 -20} {{3 2020-01-03 16:10:15.397 +0000 UTC 2020-01-03 16:10:15.397 +0000 UTC} 余额充值 1578039015 1220022 xielei -1 100} {{4 2020-01-03 16:10:17.213 +0000 UTC 2020-01-03 16:10:17.213 +0000 UTC} 宽带缴费 1578039017 1220022 xielei 1 -245} {{5 2020-01-03 16:10:27.093 +0000 UTC 2020-01-03 16:10:27.093 +0000 UTC} 宽带缴费 1578039027 7776543 xielei 1 -450}]]"
+[GIN] 2020/01/03 - 21:13:09 | 200 |   37.147973ms |   123.168.74.60 | GET      /api/deal/daily?begin_daily=2019-12-27&end_daily=2020-01-03
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/deal.go:24)[0m 
+[33m[2020-01-03 21:13:18][0m  [36;1m[36.97ms][0m  SELECT * FROM [deals]  WHERE (create_at >= '2019-12-27 00:00:00') AND (create_at <= '2020-01-04 00:00:00')  
+[36;31m[10 rows affected or returned ][0m 
+adasadasdad
+adasadasdad
+time="2020-01-03T21:13:18+08:00" level=info msg="suc resp" data="map[ca:[2019-12-27 2019-12-28 2019-12-29 2019-12-30 2019-12-31 2020-01-01 2020-01-02 2020-01-03] srls:[{7776543 line [0 0 0 0 0 0 0 -50]} {1000000 line [0 0 0 0 0 0 0 500]} {1220022 line [0 0 0 0 0 0 0 -20]}]]"
+[GIN] 2020/01/03 - 21:13:18 | 200 |   37.358198ms |   123.168.74.60 | GET      /api/deal/user?begin_daily=2019-12-27&end_daily=2020-01-03
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:13:22][0m  [36;1m[36.61ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[3 rows affected or returned ][0m 
+time="2020-01-03T21:13:22+08:00" level=info msg="suc resp" data="[{{36 2020-01-03 16:09:13.863 +0000 UTC 2020-01-03 16:16:36.83 +0000 UTC} 1000000 gebilaowang 1 175 基础套餐01  } {{37 2020-01-03 16:09:34.327 +0000 UTC 2020-01-03 16:11:58.04 +0000 UTC} 1220022 植物 1 55 基础套餐01  } {{38 2020-01-03 16:09:59.15 +0000 UTC 2020-01-03 16:12:04.513 +0000 UTC} 7776543 阿苏斯 1 500 基础套餐01  }]"
+[GIN] 2020/01/03 - 21:13:22 | 200 |   36.801877ms |   123.168.74.60 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/deal.go:24)[0m 
+[33m[2020-01-03 21:13:26][0m  [36;1m[36.82ms][0m  SELECT * FROM [deals]  WHERE (create_at >= '2019-12-27 00:00:00') AND (create_at <= '2020-01-04 00:00:00')  
+[36;31m[10 rows affected or returned ][0m 
+adasadasdad
+adasadasdad
+time="2020-01-03T21:13:26+08:00" level=info msg="suc resp" data="map[ca:[2019-12-27 2019-12-28 2019-12-29 2019-12-30 2019-12-31 2020-01-01 2020-01-02 2020-01-03] srls:[{7776543 line [0 0 0 0 0 0 0 -50]} {1000000 line [0 0 0 0 0 0 0 500]} {1220022 line [0 0 0 0 0 0 0 -20]}]]"
+[GIN] 2020/01/03 - 21:13:26 | 200 |   37.171947ms |   123.168.74.60 | GET      /api/deal/user?begin_daily=2019-12-27&end_daily=2020-01-03
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:13:31][0m  [36;1m[36.57ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[3 rows affected or returned ][0m 
+time="2020-01-03T21:13:31+08:00" level=info msg="suc resp" data="[{{36 2020-01-03 16:09:13.863 +0000 UTC 2020-01-03 16:16:36.83 +0000 UTC} 1000000 gebilaowang 1 175 基础套餐01  } {{37 2020-01-03 16:09:34.327 +0000 UTC 2020-01-03 16:11:58.04 +0000 UTC} 1220022 植物 1 55 基础套餐01  } {{38 2020-01-03 16:09:59.15 +0000 UTC 2020-01-03 16:12:04.513 +0000 UTC} 7776543 阿苏斯 1 500 基础套餐01  }]"
+[GIN] 2020/01/03 - 21:13:31 | 200 |   36.799171ms |   123.168.74.60 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/deal.go:24)[0m 
+[33m[2020-01-03 21:13:39][0m  [36;1m[38.82ms][0m  SELECT * FROM [deals]  WHERE (create_at <= '2020-02-01 00:00:00') AND (create_at >= '2020-01-01 00:00:00')  
+[36;31m[10 rows affected or returned ][0m 
+time="2020-01-03T21:13:39+08:00" level=info msg="suc resp" data="map[1:[{{4 2020-01-03 16:10:17.213 +0000 UTC 2020-01-03 16:10:17.213 +0000 UTC} 宽带缴费 1578039017 1220022 xielei 1 -245} {{5 2020-01-03 16:10:27.093 +0000 UTC 2020-01-03 16:10:27.093 +0000 UTC} 宽带缴费 1578039027 7776543 xielei 1 -450} {{8 2020-01-03 16:14:52.937 +0000 UTC 2020-01-03 16:14:52.937 +0000 UTC} 宽带缴费 1578039292 1000000 baiyou 1 -450}] 2:[{{2 2020-01-03 16:10:09.773 +0000 UTC 2020-01-03 16:10:09.773 +0000 UTC} 流量缴费 1578039009 1000000 xielei 2 -20} {{6 2020-01-03 16:11:58.027 +0000 UTC 2020-01-03 16:11:58.027 +0000 UTC} 流量缴费 1578039118 1220022 baiyou 2 -20} {{7 2020-01-03 16:12:04.5 +0000 UTC 2020-01-03 16:12:04.5 +0000 UTC} 流量缴费 1578039124 7776543 baiyou 2 -50} {{9 2020-01-03 16:15:22.187 +0000 UTC 2020-01-03 16:15:22.187 +0000 UTC} 流量缴费 1578039322 1000000 baiyou 2 -5}]]"
+[GIN] 2020/01/03 - 21:13:39 | 200 |   39.184381ms |   123.168.74.60 | GET      /api/deal/month?begin_month=2020-01&end_month=2020-01
+[GIN] 2020/01/03 - 21:32:31 | 404 |       3.961µs |   35.234.146.52 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 21:44:35 | 204 |      47.294µs |   123.168.74.60 | OPTIONS  /api/employee/login
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/employee.go:14)[0m 
+[33m[2020-01-03 21:44:35][0m  [36;1m[36.64ms][0m  SELECT * FROM [employees]  WHERE (name = 'xielei') ORDER BY [employees].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY  
+[36;31m[1 rows affected or returned ][0m 
+time="2020-01-03T21:44:35+08:00" level=info msg="suc resp" data=suc
+[GIN] 2020/01/03 - 21:44:35 | 200 |    36.83677ms |   123.168.74.60 | POST     /api/employee/login
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:44:35][0m  [36;1m[36.52ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[3 rows affected or returned ][0m 
+time="2020-01-03T21:44:35+08:00" level=info msg="suc resp" data="[{{36 2020-01-03 16:09:13.863 +0000 UTC 2020-01-03 16:16:36.83 +0000 UTC} 1000000 gebilaowang 1 175 基础套餐01  } {{37 2020-01-03 16:09:34.327 +0000 UTC 2020-01-03 16:11:58.04 +0000 UTC} 1220022 植物 1 55 基础套餐01  } {{38 2020-01-03 16:09:59.15 +0000 UTC 2020-01-03 16:12:04.513 +0000 UTC} 7776543 阿苏斯 1 500 基础套餐01  }]"
+[GIN] 2020/01/03 - 21:44:35 | 200 |   36.747539ms |   123.168.74.60 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:45:11][0m  [36;1m[36.68ms][0m  SELECT * FROM [packages]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[2 rows affected or returned ][0m 
+time="2020-01-03T21:45:11+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:08:34.437 +0000 UTC 2020-01-03 16:08:34.437 +0000 UTC} 基础套餐01 1 10 0 desc} {{2 2020-01-03 16:08:51.357 +0000 UTC 2020-01-03 16:08:51.357 +0000 UTC} 增值套餐01 2 0 10 desc}]"
+[GIN] 2020/01/03 - 21:45:11 | 200 |   36.948566ms |   123.168.74.60 | POST     /api/package/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:45:12][0m  [36;1m[36.54ms][0m  SELECT * FROM [deals]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[10 rows affected or returned ][0m 
+time="2020-01-03T21:45:12+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:10:07.153 +0000 UTC 2020-01-03 16:10:07.153 +0000 UTC} 余额充值 1578039007 1000000 xielei -1 50} {{2 2020-01-03 16:10:09.773 +0000 UTC 2020-01-03 16:10:09.773 +0000 UTC} 流量缴费 1578039009 1000000 xielei 2 -20} {{3 2020-01-03 16:10:15.397 +0000 UTC 2020-01-03 16:10:15.397 +0000 UTC} 余额充值 1578039015 1220022 xielei -1 100} {{4 2020-01-03 16:10:17.213 +0000 UTC 2020-01-03 16:10:17.213 +0000 UTC} 宽带缴费 1578039017 1220022 xielei 1 -245} {{5 2020-01-03 16:10:27.093 +0000 UTC 2020-01-03 16:10:27.093 +0000 UTC} 宽带缴费 1578039027 7776543 xielei 1 -450} {{6 2020-01-03 16:11:58.027 +0000 UTC 2020-01-03 16:11:58.027 +0000 UTC} 流量缴费 1578039118 1220022 baiyou 2 -20} {{7 2020-01-03 16:12:04.5 +0000 UTC 2020-01-03 16:12:04.5 +0000 UTC} 流量缴费 1578039124 7776543 baiyou 2 -50} {{8 2020-01-03 16:14:52.937 +0000 UTC 2020-01-03 16:14:52.937 +0000 UTC} 宽带缴费 1578039292 1000000 baiyou 1 -450} {{9 2020-01-03 16:15:22.187 +0000 UTC 2020-01-03 16:15:22.187 +0000 UTC} 流量缴费 1578039322 1000000 baiyou 2 -5} {{10 2020-01-03 16:16:36.843 +0000 UTC 2020-01-03 16:16:36.843 +0000 UTC} 余额充值 1578039396 1000000 baiyou -1 500}]"
+[GIN] 2020/01/03 - 21:45:12 | 200 |   36.847308ms |   123.168.74.60 | GET      /api/deal/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/deal.go:24)[0m 
+[33m[2020-01-03 21:45:16][0m  [36;1m[36.70ms][0m  SELECT * FROM [deals]  WHERE (create_at >= '2020-01-01 00:00:00') AND (create_at <= '2020-02-01 00:00:00')  
+[36;31m[10 rows affected or returned ][0m 
+time="2020-01-03T21:45:16+08:00" level=info msg="suc resp" data="map[1:[{{4 2020-01-03 16:10:17.213 +0000 UTC 2020-01-03 16:10:17.213 +0000 UTC} 宽带缴费 1578039017 1220022 xielei 1 -245} {{5 2020-01-03 16:10:27.093 +0000 UTC 2020-01-03 16:10:27.093 +0000 UTC} 宽带缴费 1578039027 7776543 xielei 1 -450} {{8 2020-01-03 16:14:52.937 +0000 UTC 2020-01-03 16:14:52.937 +0000 UTC} 宽带缴费 1578039292 1000000 baiyou 1 -450}] 2:[{{2 2020-01-03 16:10:09.773 +0000 UTC 2020-01-03 16:10:09.773 +0000 UTC} 流量缴费 1578039009 1000000 xielei 2 -20} {{6 2020-01-03 16:11:58.027 +0000 UTC 2020-01-03 16:11:58.027 +0000 UTC} 流量缴费 1578039118 1220022 baiyou 2 -20} {{7 2020-01-03 16:12:04.5 +0000 UTC 2020-01-03 16:12:04.5 +0000 UTC} 流量缴费 1578039124 7776543 baiyou 2 -50} {{9 2020-01-03 16:15:22.187 +0000 UTC 2020-01-03 16:15:22.187 +0000 UTC} 流量缴费 1578039322 1000000 baiyou 2 -5}]]"
+[GIN] 2020/01/03 - 21:45:16 | 200 |   36.984262ms |   123.168.74.60 | GET      /api/deal/month?begin_month=2020-01&end_month=2020-01
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/deal.go:24)[0m 
+[33m[2020-01-03 21:45:20][0m  [36;1m[36.54ms][0m  SELECT * FROM [deals]  WHERE (create_at >= '2019-12-27 00:00:00') AND (create_at <= '2020-01-04 00:00:00')  
+[36;31m[10 rows affected or returned ][0m 
+time="2020-01-03T21:45:20+08:00" level=info msg="suc resp" data="map[baiyou:[{{6 2020-01-03 16:11:58.027 +0000 UTC 2020-01-03 16:11:58.027 +0000 UTC} 流量缴费 1578039118 1220022 baiyou 2 -20} {{7 2020-01-03 16:12:04.5 +0000 UTC 2020-01-03 16:12:04.5 +0000 UTC} 流量缴费 1578039124 7776543 baiyou 2 -50} {{8 2020-01-03 16:14:52.937 +0000 UTC 2020-01-03 16:14:52.937 +0000 UTC} 宽带缴费 1578039292 1000000 baiyou 1 -450} {{9 2020-01-03 16:15:22.187 +0000 UTC 2020-01-03 16:15:22.187 +0000 UTC} 流量缴费 1578039322 1000000 baiyou 2 -5} {{10 2020-01-03 16:16:36.843 +0000 UTC 2020-01-03 16:16:36.843 +0000 UTC} 余额充值 1578039396 1000000 baiyou -1 500}] xielei:[{{1 2020-01-03 16:10:07.153 +0000 UTC 2020-01-03 16:10:07.153 +0000 UTC} 余额充值 1578039007 1000000 xielei -1 50} {{2 2020-01-03 16:10:09.773 +0000 UTC 2020-01-03 16:10:09.773 +0000 UTC} 流量缴费 1578039009 1000000 xielei 2 -20} {{3 2020-01-03 16:10:15.397 +0000 UTC 2020-01-03 16:10:15.397 +0000 UTC} 余额充值 1578039015 1220022 xielei -1 100} {{4 2020-01-03 16:10:17.213 +0000 UTC 2020-01-03 16:10:17.213 +0000 UTC} 宽带缴费 1578039017 1220022 xielei 1 -245} {{5 2020-01-03 16:10:27.093 +0000 UTC 2020-01-03 16:10:27.093 +0000 UTC} 宽带缴费 1578039027 7776543 xielei 1 -450}]]"
+[GIN] 2020/01/03 - 21:45:20 | 200 |   36.839313ms |   123.168.74.60 | GET      /api/deal/daily?begin_daily=2019-12-27&end_daily=2020-01-03
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:45:21][0m  [36;1m[36.60ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[3 rows affected or returned ][0m 
+time="2020-01-03T21:45:21+08:00" level=info msg="suc resp" data="[{{36 2020-01-03 16:09:13.863 +0000 UTC 2020-01-03 16:16:36.83 +0000 UTC} 1000000 gebilaowang 1 175 基础套餐01  } {{37 2020-01-03 16:09:34.327 +0000 UTC 2020-01-03 16:11:58.04 +0000 UTC} 1220022 植物 1 55 基础套餐01  } {{38 2020-01-03 16:09:59.15 +0000 UTC 2020-01-03 16:12:04.513 +0000 UTC} 7776543 阿苏斯 1 500 基础套餐01  }]"
+[GIN] 2020/01/03 - 21:45:21 | 200 |   36.866167ms |   123.168.74.60 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:45:38][0m  [36;1m[36.45ms][0m  SELECT * FROM [packages]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[2 rows affected or returned ][0m 
+time="2020-01-03T21:45:38+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:08:34.437 +0000 UTC 2020-01-03 16:08:34.437 +0000 UTC} 基础套餐01 1 10 0 desc} {{2 2020-01-03 16:08:51.357 +0000 UTC 2020-01-03 16:08:51.357 +0000 UTC} 增值套餐01 2 0 10 desc}]"
+[GIN] 2020/01/03 - 21:45:38 | 200 |   36.653039ms |   123.168.74.60 | POST     /api/package/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:45:38][0m  [36;1m[36.62ms][0m  SELECT * FROM [deals]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[10 rows affected or returned ][0m 
+time="2020-01-03T21:45:38+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:10:07.153 +0000 UTC 2020-01-03 16:10:07.153 +0000 UTC} 余额充值 1578039007 1000000 xielei -1 50} {{2 2020-01-03 16:10:09.773 +0000 UTC 2020-01-03 16:10:09.773 +0000 UTC} 流量缴费 1578039009 1000000 xielei 2 -20} {{3 2020-01-03 16:10:15.397 +0000 UTC 2020-01-03 16:10:15.397 +0000 UTC} 余额充值 1578039015 1220022 xielei -1 100} {{4 2020-01-03 16:10:17.213 +0000 UTC 2020-01-03 16:10:17.213 +0000 UTC} 宽带缴费 1578039017 1220022 xielei 1 -245} {{5 2020-01-03 16:10:27.093 +0000 UTC 2020-01-03 16:10:27.093 +0000 UTC} 宽带缴费 1578039027 7776543 xielei 1 -450} {{6 2020-01-03 16:11:58.027 +0000 UTC 2020-01-03 16:11:58.027 +0000 UTC} 流量缴费 1578039118 1220022 baiyou 2 -20} {{7 2020-01-03 16:12:04.5 +0000 UTC 2020-01-03 16:12:04.5 +0000 UTC} 流量缴费 1578039124 7776543 baiyou 2 -50} {{8 2020-01-03 16:14:52.937 +0000 UTC 2020-01-03 16:14:52.937 +0000 UTC} 宽带缴费 1578039292 1000000 baiyou 1 -450} {{9 2020-01-03 16:15:22.187 +0000 UTC 2020-01-03 16:15:22.187 +0000 UTC} 流量缴费 1578039322 1000000 baiyou 2 -5} {{10 2020-01-03 16:16:36.843 +0000 UTC 2020-01-03 16:16:36.843 +0000 UTC} 余额充值 1578039396 1000000 baiyou -1 500}]"
+[GIN] 2020/01/03 - 21:45:38 | 200 |   36.859586ms |   123.168.74.60 | GET      /api/deal/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:45:39][0m  [36;1m[36.53ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[3 rows affected or returned ][0m 
+time="2020-01-03T21:45:39+08:00" level=info msg="suc resp" data="[{{36 2020-01-03 16:09:13.863 +0000 UTC 2020-01-03 16:16:36.83 +0000 UTC} 1000000 gebilaowang 1 175 基础套餐01  } {{37 2020-01-03 16:09:34.327 +0000 UTC 2020-01-03 16:11:58.04 +0000 UTC} 1220022 植物 1 55 基础套餐01  } {{38 2020-01-03 16:09:59.15 +0000 UTC 2020-01-03 16:12:04.513 +0000 UTC} 7776543 阿苏斯 1 500 基础套餐01  }]"
+[GIN] 2020/01/03 - 21:45:39 | 200 |   36.765255ms |   123.168.74.60 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:45:41][0m  [36;1m[36.46ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[3 rows affected or returned ][0m 
+time="2020-01-03T21:45:41+08:00" level=info msg="suc resp" data="[{{36 2020-01-03 16:09:13.863 +0000 UTC 2020-01-03 16:16:36.83 +0000 UTC} 1000000 gebilaowang 1 175 基础套餐01  } {{37 2020-01-03 16:09:34.327 +0000 UTC 2020-01-03 16:11:58.04 +0000 UTC} 1220022 植物 1 55 基础套餐01  } {{38 2020-01-03 16:09:59.15 +0000 UTC 2020-01-03 16:12:04.513 +0000 UTC} 7776543 阿苏斯 1 500 基础套餐01  }]"
+[GIN] 2020/01/03 - 21:45:41 | 200 |   36.659763ms |   123.168.74.60 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:45:50][0m  [36;1m[36.76ms][0m  SELECT * FROM [packages]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[2 rows affected or returned ][0m 
+time="2020-01-03T21:45:50+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:08:34.437 +0000 UTC 2020-01-03 16:08:34.437 +0000 UTC} 基础套餐01 1 10 0 desc} {{2 2020-01-03 16:08:51.357 +0000 UTC 2020-01-03 16:08:51.357 +0000 UTC} 增值套餐01 2 0 10 desc}]"
+[GIN] 2020/01/03 - 21:45:50 | 200 |   36.992162ms |   123.168.74.60 | POST     /api/package/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/deal.go:24)[0m 
+[33m[2020-01-03 21:47:03][0m  [36;1m[37.02ms][0m  SELECT * FROM [deals]  WHERE (create_at >= '2020-01-01 00:00:00') AND (create_at <= '2020-02-01 00:00:00')  
+[36;31m[10 rows affected or returned ][0m 
+time="2020-01-03T21:47:03+08:00" level=info msg="suc resp" data="map[1:[{{4 2020-01-03 16:10:17.213 +0000 UTC 2020-01-03 16:10:17.213 +0000 UTC} 宽带缴费 1578039017 1220022 xielei 1 -245} {{5 2020-01-03 16:10:27.093 +0000 UTC 2020-01-03 16:10:27.093 +0000 UTC} 宽带缴费 1578039027 7776543 xielei 1 -450} {{8 2020-01-03 16:14:52.937 +0000 UTC 2020-01-03 16:14:52.937 +0000 UTC} 宽带缴费 1578039292 1000000 baiyou 1 -450}] 2:[{{2 2020-01-03 16:10:09.773 +0000 UTC 2020-01-03 16:10:09.773 +0000 UTC} 流量缴费 1578039009 1000000 xielei 2 -20} {{6 2020-01-03 16:11:58.027 +0000 UTC 2020-01-03 16:11:58.027 +0000 UTC} 流量缴费 1578039118 1220022 baiyou 2 -20} {{7 2020-01-03 16:12:04.5 +0000 UTC 2020-01-03 16:12:04.5 +0000 UTC} 流量缴费 1578039124 7776543 baiyou 2 -50} {{9 2020-01-03 16:15:22.187 +0000 UTC 2020-01-03 16:15:22.187 +0000 UTC} 流量缴费 1578039322 1000000 baiyou 2 -5}]]"
+[GIN] 2020/01/03 - 21:47:03 | 200 |   37.344001ms |   123.168.74.60 | GET      /api/deal/month?begin_month=2020-01&end_month=2020-01
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:47:21][0m  [36;1m[36.42ms][0m  SELECT * FROM [packages]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[2 rows affected or returned ][0m 
+time="2020-01-03T21:47:21+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:08:34.437 +0000 UTC 2020-01-03 16:08:34.437 +0000 UTC} 基础套餐01 1 10 0 desc} {{2 2020-01-03 16:08:51.357 +0000 UTC 2020-01-03 16:08:51.357 +0000 UTC} 增值套餐01 2 0 10 desc}]"
+[GIN] 2020/01/03 - 21:47:21 | 200 |   36.630567ms |   123.168.74.60 | POST     /api/package/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:47:22][0m  [36;1m[36.59ms][0m  SELECT * FROM [deals]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[10 rows affected or returned ][0m 
+time="2020-01-03T21:47:22+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:10:07.153 +0000 UTC 2020-01-03 16:10:07.153 +0000 UTC} 余额充值 1578039007 1000000 xielei -1 50} {{2 2020-01-03 16:10:09.773 +0000 UTC 2020-01-03 16:10:09.773 +0000 UTC} 流量缴费 1578039009 1000000 xielei 2 -20} {{3 2020-01-03 16:10:15.397 +0000 UTC 2020-01-03 16:10:15.397 +0000 UTC} 余额充值 1578039015 1220022 xielei -1 100} {{4 2020-01-03 16:10:17.213 +0000 UTC 2020-01-03 16:10:17.213 +0000 UTC} 宽带缴费 1578039017 1220022 xielei 1 -245} {{5 2020-01-03 16:10:27.093 +0000 UTC 2020-01-03 16:10:27.093 +0000 UTC} 宽带缴费 1578039027 7776543 xielei 1 -450} {{6 2020-01-03 16:11:58.027 +0000 UTC 2020-01-03 16:11:58.027 +0000 UTC} 流量缴费 1578039118 1220022 baiyou 2 -20} {{7 2020-01-03 16:12:04.5 +0000 UTC 2020-01-03 16:12:04.5 +0000 UTC} 流量缴费 1578039124 7776543 baiyou 2 -50} {{8 2020-01-03 16:14:52.937 +0000 UTC 2020-01-03 16:14:52.937 +0000 UTC} 宽带缴费 1578039292 1000000 baiyou 1 -450} {{9 2020-01-03 16:15:22.187 +0000 UTC 2020-01-03 16:15:22.187 +0000 UTC} 流量缴费 1578039322 1000000 baiyou 2 -5} {{10 2020-01-03 16:16:36.843 +0000 UTC 2020-01-03 16:16:36.843 +0000 UTC} 余额充值 1578039396 1000000 baiyou -1 500}]"
+[GIN] 2020/01/03 - 21:47:22 | 200 |   36.941238ms |   123.168.74.60 | GET      /api/deal/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:47:23][0m  [36;1m[36.51ms][0m  SELECT * FROM [packages]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[2 rows affected or returned ][0m 
+time="2020-01-03T21:47:23+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:08:34.437 +0000 UTC 2020-01-03 16:08:34.437 +0000 UTC} 基础套餐01 1 10 0 desc} {{2 2020-01-03 16:08:51.357 +0000 UTC 2020-01-03 16:08:51.357 +0000 UTC} 增值套餐01 2 0 10 desc}]"
+[GIN] 2020/01/03 - 21:47:23 | 200 |   36.724961ms |   123.168.74.60 | POST     /api/package/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:47:24][0m  [36;1m[36.72ms][0m  SELECT * FROM [deals]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[10 rows affected or returned ][0m 
+time="2020-01-03T21:47:24+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:10:07.153 +0000 UTC 2020-01-03 16:10:07.153 +0000 UTC} 余额充值 1578039007 1000000 xielei -1 50} {{2 2020-01-03 16:10:09.773 +0000 UTC 2020-01-03 16:10:09.773 +0000 UTC} 流量缴费 1578039009 1000000 xielei 2 -20} {{3 2020-01-03 16:10:15.397 +0000 UTC 2020-01-03 16:10:15.397 +0000 UTC} 余额充值 1578039015 1220022 xielei -1 100} {{4 2020-01-03 16:10:17.213 +0000 UTC 2020-01-03 16:10:17.213 +0000 UTC} 宽带缴费 1578039017 1220022 xielei 1 -245} {{5 2020-01-03 16:10:27.093 +0000 UTC 2020-01-03 16:10:27.093 +0000 UTC} 宽带缴费 1578039027 7776543 xielei 1 -450} {{6 2020-01-03 16:11:58.027 +0000 UTC 2020-01-03 16:11:58.027 +0000 UTC} 流量缴费 1578039118 1220022 baiyou 2 -20} {{7 2020-01-03 16:12:04.5 +0000 UTC 2020-01-03 16:12:04.5 +0000 UTC} 流量缴费 1578039124 7776543 baiyou 2 -50} {{8 2020-01-03 16:14:52.937 +0000 UTC 2020-01-03 16:14:52.937 +0000 UTC} 宽带缴费 1578039292 1000000 baiyou 1 -450} {{9 2020-01-03 16:15:22.187 +0000 UTC 2020-01-03 16:15:22.187 +0000 UTC} 流量缴费 1578039322 1000000 baiyou 2 -5} {{10 2020-01-03 16:16:36.843 +0000 UTC 2020-01-03 16:16:36.843 +0000 UTC} 余额充值 1578039396 1000000 baiyou -1 500}]"
+[GIN] 2020/01/03 - 21:47:24 | 200 |   37.000791ms |   123.168.74.60 | GET      /api/deal/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:47:26][0m  [36;1m[36.47ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[3 rows affected or returned ][0m 
+time="2020-01-03T21:47:26+08:00" level=info msg="suc resp" data="[{{36 2020-01-03 16:09:13.863 +0000 UTC 2020-01-03 16:16:36.83 +0000 UTC} 1000000 gebilaowang 1 175 基础套餐01  } {{37 2020-01-03 16:09:34.327 +0000 UTC 2020-01-03 16:11:58.04 +0000 UTC} 1220022 植物 1 55 基础套餐01  } {{38 2020-01-03 16:09:59.15 +0000 UTC 2020-01-03 16:12:04.513 +0000 UTC} 7776543 阿苏斯 1 500 基础套餐01  }]"
+[GIN] 2020/01/03 - 21:47:26 | 200 |   36.705555ms |   123.168.74.60 | POST     /api/account/list
+[GIN] 2020/01/03 - 21:47:27 | 204 |      50.856µs |   222.195.190.7 | OPTIONS  /api/employee/login
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/employee.go:14)[0m 
+[33m[2020-01-03 21:47:27][0m  [36;1m[36.38ms][0m  SELECT * FROM [employees]  WHERE (name = 'xielei') ORDER BY [employees].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY  
+[36;31m[1 rows affected or returned ][0m 
+time="2020-01-03T21:47:27+08:00" level=info msg="suc resp" data=suc
+[GIN] 2020/01/03 - 21:47:27 | 200 |   36.582501ms |   222.195.190.7 | POST     /api/employee/login
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:47:29][0m  [36;1m[36.67ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[3 rows affected or returned ][0m 
+time="2020-01-03T21:47:29+08:00" level=info msg="suc resp" data="[{{36 2020-01-03 16:09:13.863 +0000 UTC 2020-01-03 16:16:36.83 +0000 UTC} 1000000 gebilaowang 1 175 基础套餐01  } {{37 2020-01-03 16:09:34.327 +0000 UTC 2020-01-03 16:11:58.04 +0000 UTC} 1220022 植物 1 55 基础套餐01  } {{38 2020-01-03 16:09:59.15 +0000 UTC 2020-01-03 16:12:04.513 +0000 UTC} 7776543 阿苏斯 1 500 基础套餐01  }]"
+[GIN] 2020/01/03 - 21:47:29 | 200 |   36.909159ms |   222.195.190.7 | POST     /api/account/list
+[GIN] 2020/01/03 - 21:47:34 | 204 |      10.801µs |   123.168.74.60 | OPTIONS  /api/account/update
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:54)[0m 
+[33m[2020-01-03 21:47:34][0m  [36;1m[36.44ms][0m  UPDATE [accounts] SET [balance] = 500, [package] = '增值套餐01', [phone_number] = '7776543', [status] = 1, [user_name] = '阿苏斯'  WHERE [accounts].[id] = 38 AND ((id = 38))  
+[36;31m[2 rows affected or returned ][0m 
+time="2020-01-03T21:47:34+08:00" level=info msg="suc resp" data="{{38 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC} 7776543 阿苏斯 1 500 增值套餐01  }"
+[GIN] 2020/01/03 - 21:47:34 | 200 |  111.646476ms |   123.168.74.60 | POST     /api/account/update
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:47:34][0m  [36;1m[36.45ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[3 rows affected or returned ][0m 
+time="2020-01-03T21:47:34+08:00" level=info msg="suc resp" data="[{{36 2020-01-03 16:09:13.863 +0000 UTC 2020-01-03 16:16:36.83 +0000 UTC} 1000000 gebilaowang 1 175 基础套餐01  } {{37 2020-01-03 16:09:34.327 +0000 UTC 2020-01-03 16:11:58.04 +0000 UTC} 1220022 植物 1 55 基础套餐01  } {{38 2020-01-03 16:09:59.15 +0000 UTC 2020-01-03 21:47:34.237 +0000 UTC} 7776543 阿苏斯 1 500 增值套餐01  }]"
+[GIN] 2020/01/03 - 21:47:34 | 200 |   36.703674ms |   123.168.74.60 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:47:37][0m  [36;1m[36.51ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[3 rows affected or returned ][0m 
+time="2020-01-03T21:47:37+08:00" level=info msg="suc resp" data="[{{36 2020-01-03 16:09:13.863 +0000 UTC 2020-01-03 16:16:36.83 +0000 UTC} 1000000 gebilaowang 1 175 基础套餐01  } {{37 2020-01-03 16:09:34.327 +0000 UTC 2020-01-03 16:11:58.04 +0000 UTC} 1220022 植物 1 55 基础套餐01  } {{38 2020-01-03 16:09:59.15 +0000 UTC 2020-01-03 21:47:34.237 +0000 UTC} 7776543 阿苏斯 1 500 增值套餐01  }]"
+[GIN] 2020/01/03 - 21:47:37 | 200 |   36.749053ms |   123.168.74.60 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/deal.go:24)[0m 
+[33m[2020-01-03 21:48:12][0m  [36;1m[36.97ms][0m  SELECT * FROM [deals]  WHERE (create_at >= '2020-01-01 00:00:00') AND (create_at <= '2020-01-25 00:00:00')  
+[36;31m[10 rows affected or returned ][0m 
+adasadasdad
+adasadasdad
+time="2020-01-03T21:48:12+08:00" level=info msg="suc resp" data="map[ca:[2020-01-01 2020-01-02 2020-01-03 2020-01-04 2020-01-05 2020-01-06 2020-01-07 2020-01-08 2020-01-09 2020-01-10 2020-01-11 2020-01-12 2020-01-13 2020-01-14 2020-01-15 2020-01-16 2020-01-17 2020-01-18 2020-01-19 2020-01-20 2020-01-21 2020-01-22 2020-01-23 2020-01-24] srls:[{1000000 line [0 0 500 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]} {1220022 line [0 0 -20 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]} {7776543 line [0 0 -50 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]}]]"
+[GIN] 2020/01/03 - 21:48:12 | 200 |   37.386538ms |   222.195.190.7 | GET      /api/deal/user?begin_daily=2020-01-01&end_daily=2020-01-24
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/deal.go:24)[0m 
+[33m[2020-01-03 21:49:08][0m  [36;1m[36.82ms][0m  SELECT * FROM [deals]  WHERE (create_at >= '2020-01-02 00:00:00') AND (create_at <= '2020-01-17 00:00:00')  
+[36;31m[10 rows affected or returned ][0m 
+adasadasdad
+adasadasdad
+time="2020-01-03T21:49:08+08:00" level=info msg="suc resp" data="map[ca:[2020-01-02 2020-01-03 2020-01-04 2020-01-05 2020-01-06 2020-01-07 2020-01-08 2020-01-09 2020-01-10 2020-01-11 2020-01-12 2020-01-13 2020-01-14 2020-01-15 2020-01-16] srls:[{1220022 line [0 -20 0 0 0 0 0 0 0 0 0 0 0 0 0]} {7776543 line [0 -50 0 0 0 0 0 0 0 0 0 0 0 0 0]} {1000000 line [0 500 0 0 0 0 0 0 0 0 0 0 0 0 0]}]]"
+[GIN] 2020/01/03 - 21:49:08 | 200 |   37.081211ms |   222.195.190.7 | GET      /api/deal/user?begin_daily=2020-01-02&end_daily=2020-01-16
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/deal.go:24)[0m 
+[33m[2020-01-03 21:49:19][0m  [36;1m[36.29ms][0m  SELECT * FROM [deals]  WHERE (create_at >= '2020-02-01 00:00:00') AND (create_at <= '2020-09-01 00:00:00')  
+[36;31m[0 rows affected or returned ][0m 
+time="2020-01-03T21:49:19+08:00" level=info msg="suc resp" data="map[]"
+[GIN] 2020/01/03 - 21:49:19 | 200 |   36.504017ms |   222.195.190.7 | GET      /api/deal/month?begin_month=2020-02&end_month=2020-08
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:49:24][0m  [36;1m[36.52ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[3 rows affected or returned ][0m 
+time="2020-01-03T21:49:24+08:00" level=info msg="suc resp" data="[{{36 2020-01-03 16:09:13.863 +0000 UTC 2020-01-03 16:16:36.83 +0000 UTC} 1000000 gebilaowang 1 175 基础套餐01  } {{37 2020-01-03 16:09:34.327 +0000 UTC 2020-01-03 16:11:58.04 +0000 UTC} 1220022 植物 1 55 基础套餐01  } {{38 2020-01-03 16:09:59.15 +0000 UTC 2020-01-03 21:47:34.237 +0000 UTC} 7776543 阿苏斯 1 500 增值套餐01  }]"
+[GIN] 2020/01/03 - 21:49:24 | 200 |   36.766935ms |   222.195.190.7 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/deal.go:24)[0m 
+[33m[2020-01-03 21:49:30][0m  [36;1m[36.87ms][0m  SELECT * FROM [deals]  WHERE (create_at >= '2019-07-01 00:00:00') AND (create_at <= '2020-02-01 00:00:00')  
+[36;31m[10 rows affected or returned ][0m 
+time="2020-01-03T21:49:30+08:00" level=info msg="suc resp" data="map[1:[{{4 2020-01-03 16:10:17.213 +0000 UTC 2020-01-03 16:10:17.213 +0000 UTC} 宽带缴费 1578039017 1220022 xielei 1 -245} {{5 2020-01-03 16:10:27.093 +0000 UTC 2020-01-03 16:10:27.093 +0000 UTC} 宽带缴费 1578039027 7776543 xielei 1 -450} {{8 2020-01-03 16:14:52.937 +0000 UTC 2020-01-03 16:14:52.937 +0000 UTC} 宽带缴费 1578039292 1000000 baiyou 1 -450}] 2:[{{2 2020-01-03 16:10:09.773 +0000 UTC 2020-01-03 16:10:09.773 +0000 UTC} 流量缴费 1578039009 1000000 xielei 2 -20} {{6 2020-01-03 16:11:58.027 +0000 UTC 2020-01-03 16:11:58.027 +0000 UTC} 流量缴费 1578039118 1220022 baiyou 2 -20} {{7 2020-01-03 16:12:04.5 +0000 UTC 2020-01-03 16:12:04.5 +0000 UTC} 流量缴费 1578039124 7776543 baiyou 2 -50} {{9 2020-01-03 16:15:22.187 +0000 UTC 2020-01-03 16:15:22.187 +0000 UTC} 流量缴费 1578039322 1000000 baiyou 2 -5}]]"
+[GIN] 2020/01/03 - 21:49:30 | 200 |   37.214065ms |   123.168.74.60 | GET      /api/deal/month?begin_month=2019-07&end_month=2020-01
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/deal.go:24)[0m 
+[33m[2020-01-03 21:49:40][0m  [36;1m[36.98ms][0m  SELECT * FROM [deals]  WHERE (create_at >= '2019-12-27 00:00:00') AND (create_at <= '2020-01-04 00:00:00')  
+[36;31m[10 rows affected or returned ][0m 
+time="2020-01-03T21:49:40+08:00" level=info msg="suc resp" data="map[baiyou:[{{6 2020-01-03 16:11:58.027 +0000 UTC 2020-01-03 16:11:58.027 +0000 UTC} 流量缴费 1578039118 1220022 baiyou 2 -20} {{7 2020-01-03 16:12:04.5 +0000 UTC 2020-01-03 16:12:04.5 +0000 UTC} 流量缴费 1578039124 7776543 baiyou 2 -50} {{8 2020-01-03 16:14:52.937 +0000 UTC 2020-01-03 16:14:52.937 +0000 UTC} 宽带缴费 1578039292 1000000 baiyou 1 -450} {{9 2020-01-03 16:15:22.187 +0000 UTC 2020-01-03 16:15:22.187 +0000 UTC} 流量缴费 1578039322 1000000 baiyou 2 -5} {{10 2020-01-03 16:16:36.843 +0000 UTC 2020-01-03 16:16:36.843 +0000 UTC} 余额充值 1578039396 1000000 baiyou -1 500}] xielei:[{{1 2020-01-03 16:10:07.153 +0000 UTC 2020-01-03 16:10:07.153 +0000 UTC} 余额充值 1578039007 1000000 xielei -1 50} {{2 2020-01-03 16:10:09.773 +0000 UTC 2020-01-03 16:10:09.773 +0000 UTC} 流量缴费 1578039009 1000000 xielei 2 -20} {{3 2020-01-03 16:10:15.397 +0000 UTC 2020-01-03 16:10:15.397 +0000 UTC} 余额充值 1578039015 1220022 xielei -1 100} {{4 2020-01-03 16:10:17.213 +0000 UTC 2020-01-03 16:10:17.213 +0000 UTC} 宽带缴费 1578039017 1220022 xielei 1 -245} {{5 2020-01-03 16:10:27.093 +0000 UTC 2020-01-03 16:10:27.093 +0000 UTC} 宽带缴费 1578039027 7776543 xielei 1 -450}]]"
+[GIN] 2020/01/03 - 21:49:40 | 200 |   37.519885ms |   123.168.74.60 | GET      /api/deal/daily?begin_daily=2019-12-27&end_daily=2020-01-03
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/deal.go:24)[0m 
+[33m[2020-01-03 21:49:56][0m  [36;1m[36.69ms][0m  SELECT * FROM [deals]  WHERE (create_at >= '2019-12-30 00:00:00') AND (create_at <= '2020-01-04 00:00:00')  
+[36;31m[10 rows affected or returned ][0m 
+adasadasdad
+adasadasdad
+time="2020-01-03T21:49:56+08:00" level=info msg="suc resp" data="map[ca:[2019-12-30 2019-12-31 2020-01-01 2020-01-02 2020-01-03] srls:[{1000000 line [0 0 0 0 500]} {1220022 line [0 0 0 0 -20]} {7776543 line [0 0 0 0 -50]}]]"
+[GIN] 2020/01/03 - 21:49:56 | 200 |   36.928791ms |   123.168.74.60 | GET      /api/deal/user?begin_daily=2019-12-30&end_daily=2020-01-03
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:50:00][0m  [36;1m[36.57ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[3 rows affected or returned ][0m 
+time="2020-01-03T21:50:00+08:00" level=info msg="suc resp" data="[{{36 2020-01-03 16:09:13.863 +0000 UTC 2020-01-03 16:16:36.83 +0000 UTC} 1000000 gebilaowang 1 175 基础套餐01  } {{37 2020-01-03 16:09:34.327 +0000 UTC 2020-01-03 16:11:58.04 +0000 UTC} 1220022 植物 1 55 基础套餐01  } {{38 2020-01-03 16:09:59.15 +0000 UTC 2020-01-03 21:47:34.237 +0000 UTC} 7776543 阿苏斯 1 500 增值套餐01  }]"
+[GIN] 2020/01/03 - 21:50:00 | 200 |   36.749725ms |   123.168.74.60 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:50:01][0m  [36;1m[36.84ms][0m  SELECT * FROM [packages]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[2 rows affected or returned ][0m 
+time="2020-01-03T21:50:01+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:08:34.437 +0000 UTC 2020-01-03 16:08:34.437 +0000 UTC} 基础套餐01 1 10 0 desc} {{2 2020-01-03 16:08:51.357 +0000 UTC 2020-01-03 16:08:51.357 +0000 UTC} 增值套餐01 2 0 10 desc}]"
+[GIN] 2020/01/03 - 21:50:01 | 200 |    37.07223ms |   123.168.74.60 | POST     /api/package/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:50:02][0m  [36;1m[36.48ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[3 rows affected or returned ][0m 
+time="2020-01-03T21:50:02+08:00" level=info msg="suc resp" data="[{{36 2020-01-03 16:09:13.863 +0000 UTC 2020-01-03 16:16:36.83 +0000 UTC} 1000000 gebilaowang 1 175 基础套餐01  } {{37 2020-01-03 16:09:34.327 +0000 UTC 2020-01-03 16:11:58.04 +0000 UTC} 1220022 植物 1 55 基础套餐01  } {{38 2020-01-03 16:09:59.15 +0000 UTC 2020-01-03 21:47:34.237 +0000 UTC} 7776543 阿苏斯 1 500 增值套餐01  }]"
+[GIN] 2020/01/03 - 21:50:02 | 200 |   36.718203ms |   123.168.74.60 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:50:02][0m  [36;1m[36.41ms][0m  SELECT * FROM [packages]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[2 rows affected or returned ][0m 
+time="2020-01-03T21:50:02+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:08:34.437 +0000 UTC 2020-01-03 16:08:34.437 +0000 UTC} 基础套餐01 1 10 0 desc} {{2 2020-01-03 16:08:51.357 +0000 UTC 2020-01-03 16:08:51.357 +0000 UTC} 增值套餐01 2 0 10 desc}]"
+[GIN] 2020/01/03 - 21:50:02 | 200 |   36.613111ms |   123.168.74.60 | POST     /api/package/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 21:50:07][0m  [36;1m[36.66ms][0m  SELECT * FROM [deals]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[10 rows affected or returned ][0m 
+time="2020-01-03T21:50:07+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:10:07.153 +0000 UTC 2020-01-03 16:10:07.153 +0000 UTC} 余额充值 1578039007 1000000 xielei -1 50} {{2 2020-01-03 16:10:09.773 +0000 UTC 2020-01-03 16:10:09.773 +0000 UTC} 流量缴费 1578039009 1000000 xielei 2 -20} {{3 2020-01-03 16:10:15.397 +0000 UTC 2020-01-03 16:10:15.397 +0000 UTC} 余额充值 1578039015 1220022 xielei -1 100} {{4 2020-01-03 16:10:17.213 +0000 UTC 2020-01-03 16:10:17.213 +0000 UTC} 宽带缴费 1578039017 1220022 xielei 1 -245} {{5 2020-01-03 16:10:27.093 +0000 UTC 2020-01-03 16:10:27.093 +0000 UTC} 宽带缴费 1578039027 7776543 xielei 1 -450} {{6 2020-01-03 16:11:58.027 +0000 UTC 2020-01-03 16:11:58.027 +0000 UTC} 流量缴费 1578039118 1220022 baiyou 2 -20} {{7 2020-01-03 16:12:04.5 +0000 UTC 2020-01-03 16:12:04.5 +0000 UTC} 流量缴费 1578039124 7776543 baiyou 2 -50} {{8 2020-01-03 16:14:52.937 +0000 UTC 2020-01-03 16:14:52.937 +0000 UTC} 宽带缴费 1578039292 1000000 baiyou 1 -450} {{9 2020-01-03 16:15:22.187 +0000 UTC 2020-01-03 16:15:22.187 +0000 UTC} 流量缴费 1578039322 1000000 baiyou 2 -5} {{10 2020-01-03 16:16:36.843 +0000 UTC 2020-01-03 16:16:36.843 +0000 UTC} 余额充值 1578039396 1000000 baiyou -1 500}]"
+[GIN] 2020/01/03 - 21:50:07 | 200 |   37.002196ms |   123.168.74.60 | GET      /api/deal/list
+[GIN] 2020/01/03 - 21:56:20 | 404 |       4.218µs |  35.246.184.101 | POST     /cgi-bin/ViewLog.asp
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /api/account/delete       --> upc.edu.cn/telecom_business/telecom_business_api/view.DeleteAccount (4 handlers)
+[GIN-debug] POST   /api/account/delete       --> upc.edu.cn/telecom_business/telecom_business_api/view.DeleteAccount (4 handlers)
+[GIN-debug] GET    /api/deal/daily           --> upc.edu.cn/telecom_business/telecom_business_api/view.DailyDeals (4 handlers)
+[GIN-debug] POST   /api/deal/daily           --> upc.edu.cn/telecom_business/telecom_business_api/view.DailyDeals (4 handlers)
+[GIN-debug] GET    /api/employee/login       --> upc.edu.cn/telecom_business/telecom_business_api/view.LoginEmployee (4 handlers)
+[GIN-debug] POST   /api/employee/login       --> upc.edu.cn/telecom_business/telecom_business_api/view.LoginEmployee (4 handlers)
+[GIN-debug] GET    /api/package/update       --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdatePackage (4 handlers)
+[GIN-debug] POST   /api/package/update       --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdatePackage (4 handlers)
+[GIN-debug] GET    /api/account/update       --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateAccount (4 handlers)
+[GIN-debug] POST   /api/account/update       --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateAccount (4 handlers)
+[GIN-debug] GET    /api/account/use_balance  --> upc.edu.cn/telecom_business/telecom_business_api/view.UseAccountBalance (4 handlers)
+[GIN-debug] POST   /api/account/use_balance  --> upc.edu.cn/telecom_business/telecom_business_api/view.UseAccountBalance (4 handlers)
+[GIN-debug] GET    /api/deal/list            --> upc.edu.cn/telecom_business/telecom_business_api/view.ListDeal (4 handlers)
+[GIN-debug] POST   /api/deal/list            --> upc.edu.cn/telecom_business/telecom_business_api/view.ListDeal (4 handlers)
+[GIN-debug] GET    /api/deal/month           --> upc.edu.cn/telecom_business/telecom_business_api/view.MonthlyDeals (4 handlers)
+[GIN-debug] POST   /api/deal/month           --> upc.edu.cn/telecom_business/telecom_business_api/view.MonthlyDeals (4 handlers)
+[GIN-debug] GET    /api/deal/user            --> upc.edu.cn/telecom_business/telecom_business_api/view.UserDailyDeals (4 handlers)
+[GIN-debug] POST   /api/deal/user            --> upc.edu.cn/telecom_business/telecom_business_api/view.UserDailyDeals (4 handlers)
+[GIN-debug] GET    /api/account/list         --> upc.edu.cn/telecom_business/telecom_business_api/view.ListAccount (4 handlers)
+[GIN-debug] POST   /api/account/list         --> upc.edu.cn/telecom_business/telecom_business_api/view.ListAccount (4 handlers)
+[GIN-debug] GET    /api/deal/update          --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateDeal (4 handlers)
+[GIN-debug] POST   /api/deal/update          --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateDeal (4 handlers)
+[GIN-debug] GET    /api/employee/list        --> upc.edu.cn/telecom_business/telecom_business_api/view.ListEmployee (4 handlers)
+[GIN-debug] POST   /api/employee/list        --> upc.edu.cn/telecom_business/telecom_business_api/view.ListEmployee (4 handlers)
+[GIN-debug] GET    /api/employee/update      --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateEmployee (4 handlers)
+[GIN-debug] POST   /api/employee/update      --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateEmployee (4 handlers)
+[GIN-debug] GET    /api/package/list         --> upc.edu.cn/telecom_business/telecom_business_api/view.ListPackage (4 handlers)
+[GIN-debug] POST   /api/package/list         --> upc.edu.cn/telecom_business/telecom_business_api/view.ListPackage (4 handlers)
+[GIN-debug] GET    /api/account/change_balance --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateAccountBalance (4 handlers)
+[GIN-debug] POST   /api/account/change_balance --> upc.edu.cn/telecom_business/telecom_business_api/view.UpdateAccountBalance (4 handlers)
+[GIN-debug] Environment variable PORT is undefined. Using port :8080 by default
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/01/03 - 22:00:19 | 204 |      13.646µs |   123.168.74.60 | OPTIONS  /api/account/use_balance?phone_number=1000000&kuandai=10Mbps-1%E5%B9%B4-245%E5%85%83
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/account.go:19)[0m 
+[33m[2020-01-03 22:00:20][0m  [36;1m[31.60ms][0m  SELECT * FROM [accounts]  WHERE (phone_number = '1000000') ORDER BY [accounts].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY  
+[36;31m[1 rows affected or returned ][0m 
+time="2020-01-03T22:00:20+08:00" level=warning msg="err resp" error="余额不足"
+[GIN] 2020/01/03 - 22:00:20 | 200 |   94.409107ms |   123.168.74.60 | POST     /api/account/use_balance?phone_number=1000000&kuandai=10Mbps-1%E5%B9%B4-245%E5%85%83
+[GIN] 2020/01/03 - 22:00:21 | 204 |      11.719µs |   123.168.74.60 | OPTIONS  /api/account/use_balance?phone_number=1000000&kuandai=100Mbps-1%E5%B9%B4-450%E5%85%83
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/account.go:19)[0m 
+[33m[2020-01-03 22:00:21][0m  [36;1m[31.80ms][0m  SELECT * FROM [accounts]  WHERE (phone_number = '1000000') ORDER BY [accounts].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY  
+[36;31m[1 rows affected or returned ][0m 
+time="2020-01-03T22:00:21+08:00" level=warning msg="err resp" error="余额不足"
+[GIN] 2020/01/03 - 22:00:21 | 200 |   94.090233ms |   123.168.74.60 | POST     /api/account/use_balance?phone_number=1000000&kuandai=100Mbps-1%E5%B9%B4-450%E5%85%83
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 22:00:22][0m  [36;1m[31.54ms][0m  SELECT * FROM [packages]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[2 rows affected or returned ][0m 
+time="2020-01-03T22:00:22+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:08:34.437 +0000 UTC 2020-01-03 16:08:34.437 +0000 UTC} 基础套餐01 1 10 0 desc} {{2 2020-01-03 16:08:51.357 +0000 UTC 2020-01-03 16:08:51.357 +0000 UTC} 增值套餐01 2 0 10 desc}]"
+[GIN] 2020/01/03 - 22:00:22 | 200 |   31.884306ms |   123.168.74.60 | POST     /api/package/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-03 22:00:24][0m  [36;1m[31.55ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[3 rows affected or returned ][0m 
+time="2020-01-03T22:00:24+08:00" level=info msg="suc resp" data="[{{36 2020-01-03 16:09:13.863 +0000 UTC 2020-01-03 16:16:36.83 +0000 UTC} 1000000 gebilaowang 1 175 基础套餐01  } {{37 2020-01-03 16:09:34.327 +0000 UTC 2020-01-03 16:11:58.04 +0000 UTC} 1220022 植物 1 55 基础套餐01  } {{38 2020-01-03 16:09:59.15 +0000 UTC 2020-01-03 21:47:34.237 +0000 UTC} 7776543 阿苏斯 1 500 增值套餐01  }]"
+[GIN] 2020/01/03 - 22:00:24 | 200 |   31.939552ms |   123.168.74.60 | POST     /api/account/list
+[GIN] 2020/01/03 - 22:08:26 | 404 |       4.887µs |    35.242.193.5 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 22:14:11 | 404 |       6.186µs |     2.187.100.3 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 22:30:19 | 404 |       6.248µs |   34.89.166.135 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 22:33:33 | 404 |       5.896µs |   35.242.144.28 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 22:34:48 | 404 |       4.793µs |   66.45.225.232 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 22:34:49 | 404 |      17.457µs |   104.155.35.24 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 22:50:16 | 404 |       5.885µs |     2.187.100.3 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 23:31:15 | 404 |       4.699µs |   139.162.79.87 | GET      /
+[GIN] 2020/01/03 - 23:31:17 | 404 |       5.978µs |   139.162.79.87 | GET      /echo.php?info=20200103233053
+[GIN] 2020/01/03 - 23:49:22 | 404 |       5.845µs |   104.155.35.24 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/03 - 23:49:22 | 404 |        4.29µs |   104.155.35.24 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 00:05:19 | 404 |       4.902µs |   34.89.166.135 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 00:30:29 | 404 |       4.237µs |    35.246.21.67 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 00:30:29 | 404 |       5.212µs |    35.246.21.67 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 00:32:50 | 404 |       5.188µs |   185.132.53.18 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 00:32:51 | 404 |       6.242µs |   185.132.53.18 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 00:36:51 | 404 |       6.349µs | 103.209.143.200 | GET      /
+[GIN] 2020/01/04 - 00:56:18 | 404 |       4.253µs |    95.66.143.43 | GET      /
+[GIN] 2020/01/04 - 00:56:19 | 404 |       5.488µs |    95.66.143.43 | GET      /ncsi.txt
+[GIN] 2020/01/04 - 00:57:30 | 404 |       6.413µs |   35.246.25.118 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 00:57:31 | 404 |       5.954µs |   35.246.25.118 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 01:14:11 | 404 |       5.739µs |   223.75.33.155 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 01:30:25 | 404 |        4.76µs | 122.136.212.216 | GET      /seeyon/htmlofficeservlet
+[GIN] 2020/01/04 - 01:30:25 | 404 |       6.529µs | 122.136.212.216 | GET      /secure/ContactAdministrators!default.jspa
+[GIN] 2020/01/04 - 01:30:25 | 404 |       4.809µs | 122.136.212.216 | GET      /weaver/bsh.servlet.BshServlet
+[GIN] 2020/01/04 - 01:30:25 | 404 |       4.346µs | 122.136.212.216 | GET      /solr/
+[GIN] 2020/01/04 - 01:30:25 | 404 |       4.082µs | 122.136.212.216 | GET      /manager/html
+[GIN] 2020/01/04 - 01:45:46 | 404 |        4.39µs |     34.89.83.17 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 01:53:34 | 404 |       4.494µs |  35.228.243.213 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 01:55:50 | 404 |       6.539µs |    196.52.43.59 | GET      /
+[GIN] 2020/01/04 - 02:05:37 | 404 |       4.348µs |    79.127.98.31 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 02:06:44 | 404 |       4.169µs |   47.104.210.65 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 02:23:18 | 404 |       4.515µs |  35.195.198.163 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 02:23:18 | 404 |       4.387µs |  35.195.198.163 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 02:30:35 | 404 |       4.252µs |  35.228.243.213 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 03:36:38 | 404 |      12.841µs |   35.195.66.243 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 03:49:00 | 404 |       4.228µs |   35.184.205.11 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 03:56:09 | 404 |       5.957µs |    35.246.45.40 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 03:56:49 | 404 |       4.814µs |  35.242.242.140 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 03:59:59 | 404 |       5.192µs |   35.198.108.76 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 04:03:49 | 404 |        4.72µs |   35.195.66.243 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 04:07:13 | 404 |      11.409µs |   50.27.247.184 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 04:10:17 | 404 |       5.937µs |  222.186.19.221 | CONNECT  
+[GIN] 2020/01/04 - 04:15:53 | 404 |       6.035µs |  117.149.175.86 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 04:31:27 | 404 |       4.414µs | 223.244.236.232 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 04:34:51 | 404 |       4.372µs |   185.132.53.18 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 04:37:46 | 404 |       5.122µs |    35.242.193.5 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 04:51:27 | 404 |       4.167µs |     60.174.2.55 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 04:54:17 | 404 |        4.42µs |    35.242.193.5 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 04:55:52 | 404 |       5.083µs |    34.89.54.237 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 05:04:31 | 404 |       4.361µs |  165.22.117.165 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 05:15:33 | 404 |       4.372µs |  162.243.11.116 | GET      /
+[GIN] 2020/01/04 - 05:15:48 | 404 |       4.363µs |   47.104.210.65 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 05:32:58 | 404 |       4.445µs |  35.228.243.213 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 05:52:40 | 404 |       4.652µs |    34.89.54.237 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 06:08:21 | 404 |       4.986µs | 179.159.248.172 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 06:09:19 | 404 |       5.126µs |   50.27.247.184 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 06:09:20 | 404 |       4.648µs |   50.27.247.184 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 06:09:20 | 404 |       4.473µs |   50.27.247.184 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 06:09:23 | 404 |       5.275µs |   50.27.247.184 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 06:24:25 | 404 |       4.475µs |   186.159.6.114 | GET      /
+[GIN] 2020/01/04 - 06:49:43 | 404 |       4.438µs |    35.246.45.40 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 06:51:16 | 404 |       6.621µs |   169.197.108.6 | GET      /login
+[GIN] 2020/01/04 - 06:55:55 | 404 |       4.074µs |   35.246.101.40 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 07:03:57 | 404 |       4.493µs |    34.89.54.237 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 07:06:13 | 404 |       6.293µs |  35.234.138.203 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 07:11:27 | 404 |       4.286µs |    35.246.21.67 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 07:33:39 | 404 |       4.814µs |   35.242.144.28 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 07:37:02 | 404 |       6.094µs |   14.37.117.106 | POST     /cgi-bin/ViewLog.asp
+[GIN] 2020/01/04 - 07:57:31 | 404 |       4.099µs |  35.246.184.101 | POST     /cgi-bin/ViewLog.asp
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-04 08:00:53][0m [31;1m failed to send SQL Batch: write tcp 172.21.0.12:47246->121.199.78.126:1433: write: broken pipe [0m
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-04 08:00:53][0m  [36;1m[0.28ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[0 rows affected or returned ][0m 
+time="2020-01-04T08:00:53+08:00" level=warning msg="err resp" error="failed to send SQL Batch: write tcp 172.21.0.12:47246->121.199.78.126:1433: write: broken pipe"
+[GIN] 2020/01/04 - 08:00:53 | 200 |     582.437µs |  123.168.74.191 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-04 08:00:57][0m  [36;1m[222.92ms][0m  SELECT * FROM [packages]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[2 rows affected or returned ][0m 
+time="2020-01-04T08:00:57+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:08:34.437 +0000 UTC 2020-01-03 16:08:34.437 +0000 UTC} 基础套餐01 1 10 0 desc} {{2 2020-01-03 16:08:51.357 +0000 UTC 2020-01-03 16:08:51.357 +0000 UTC} 增值套餐01 2 0 10 desc}]"
+[GIN] 2020/01/04 - 08:00:57 | 200 |  223.195546ms |  123.168.74.191 | POST     /api/package/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-04 08:00:57][0m  [36;1m[36.25ms][0m  SELECT * FROM [deals]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[10 rows affected or returned ][0m 
+time="2020-01-04T08:00:57+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:10:07.153 +0000 UTC 2020-01-03 16:10:07.153 +0000 UTC} 余额充值 1578039007 1000000 xielei -1 50} {{2 2020-01-03 16:10:09.773 +0000 UTC 2020-01-03 16:10:09.773 +0000 UTC} 流量缴费 1578039009 1000000 xielei 2 -20} {{3 2020-01-03 16:10:15.397 +0000 UTC 2020-01-03 16:10:15.397 +0000 UTC} 余额充值 1578039015 1220022 xielei -1 100} {{4 2020-01-03 16:10:17.213 +0000 UTC 2020-01-03 16:10:17.213 +0000 UTC} 宽带缴费 1578039017 1220022 xielei 1 -245} {{5 2020-01-03 16:10:27.093 +0000 UTC 2020-01-03 16:10:27.093 +0000 UTC} 宽带缴费 1578039027 7776543 xielei 1 -450} {{6 2020-01-03 16:11:58.027 +0000 UTC 2020-01-03 16:11:58.027 +0000 UTC} 流量缴费 1578039118 1220022 baiyou 2 -20} {{7 2020-01-03 16:12:04.5 +0000 UTC 2020-01-03 16:12:04.5 +0000 UTC} 流量缴费 1578039124 7776543 baiyou 2 -50} {{8 2020-01-03 16:14:52.937 +0000 UTC 2020-01-03 16:14:52.937 +0000 UTC} 宽带缴费 1578039292 1000000 baiyou 1 -450} {{9 2020-01-03 16:15:22.187 +0000 UTC 2020-01-03 16:15:22.187 +0000 UTC} 流量缴费 1578039322 1000000 baiyou 2 -5} {{10 2020-01-03 16:16:36.843 +0000 UTC 2020-01-03 16:16:36.843 +0000 UTC} 余额充值 1578039396 1000000 baiyou -1 500}]"
+[GIN] 2020/01/04 - 08:00:57 | 200 |   36.594198ms |  123.168.74.191 | GET      /api/deal/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-04 08:00:58][0m  [36;1m[67.18ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[3 rows affected or returned ][0m 
+time="2020-01-04T08:00:58+08:00" level=info msg="suc resp" data="[{{36 2020-01-03 16:09:13.863 +0000 UTC 2020-01-03 16:16:36.83 +0000 UTC} 1000000 gebilaowang 1 175 基础套餐01  } {{37 2020-01-03 16:09:34.327 +0000 UTC 2020-01-03 16:11:58.04 +0000 UTC} 1220022 植物 1 55 基础套餐01  } {{38 2020-01-03 16:09:59.15 +0000 UTC 2020-01-03 21:47:34.237 +0000 UTC} 7776543 阿苏斯 1 500 增值套餐01  }]"
+[GIN] 2020/01/04 - 08:00:58 | 200 |    67.39286ms |  123.168.74.191 | POST     /api/account/list
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-04 08:01:07][0m  [36;1m[34.61ms][0m  SELECT * FROM [deals]  WHERE (phone_number = '1000000') ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[5 rows affected or returned ][0m 
+time="2020-01-04T08:01:07+08:00" level=info msg="suc resp" data="[{{1 2020-01-03 16:10:07.153 +0000 UTC 2020-01-03 16:10:07.153 +0000 UTC} 余额充值 1578039007 1000000 xielei -1 50} {{2 2020-01-03 16:10:09.773 +0000 UTC 2020-01-03 16:10:09.773 +0000 UTC} 流量缴费 1578039009 1000000 xielei 2 -20} {{8 2020-01-03 16:14:52.937 +0000 UTC 2020-01-03 16:14:52.937 +0000 UTC} 宽带缴费 1578039292 1000000 baiyou 1 -450} {{9 2020-01-03 16:15:22.187 +0000 UTC 2020-01-03 16:15:22.187 +0000 UTC} 流量缴费 1578039322 1000000 baiyou 2 -5} {{10 2020-01-03 16:16:36.843 +0000 UTC 2020-01-03 16:16:36.843 +0000 UTC} 余额充值 1578039396 1000000 baiyou -1 500}]"
+[GIN] 2020/01/04 - 08:01:07 | 200 |    34.83424ms |  123.168.74.191 | GET      /api/deal/list?id=36&create_at=2020-01-03T16:09:13.863Z&update_at=2020-01-03T16:16:36.83Z&phone_number=1000000&user_name=gebilaowang&status=1&balance=175&package=%E5%9F%BA%E7%A1%80%E5%A5%97%E9%A4%9001&info=&desc2=
+[GIN] 2020/01/04 - 08:01:09 | 404 |       5.059µs |    35.205.34.23 | POST     /cgi-bin/ViewLog.asp
+
+[35m(/root/go/src/upc.edu.cn/telecom_business/telecom_business_api/dal/db/base.go:41)[0m 
+[33m[2020-01-04 08:01:09][0m  [36;1m[33.29ms][0m  SELECT * FROM [accounts]   ORDER BY [id] OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY  
+[36;31m[3 rows affected or returned ][0m 
+time="2020-01-04T08:01:09+08:00" level=info msg="suc resp" data="[{{36 2020-01-03 16:09:13.863 +0000 UTC 2020-01-03 16:16:36.83 +0000 UTC} 1000000 gebilaowang 1 175 基础套餐01  } {{37 2020-01-03 16:09:34.327 +0000 UTC 2020-01-03 16:11:58.04 +0000 UTC} 1220022 植物 1 55 基础套餐01  } {{38 2020-01-03 16:09:59.15 +0000 UTC 2020-01-03 21:47:34.237 +0000 UTC} 7776543 阿苏斯 1 500 增值套餐01  }]"
+[GIN] 2020/01/04 - 08:01:09 | 200 |   33.513746ms |  123.168.74.191 | POST     /api/account/list
+[GIN] 2020/01/04 - 08:15:29 | 404 |       6.029µs |  212.142.154.71 | POST     /cgi-bin/ViewLog.asp

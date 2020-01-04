@@ -13,7 +13,6 @@ create table accounts
         PRIMARY KEY (id)
 );
 go
-
 create UNIQUE INDEX uniq_account
     on accounts (phone_number)
 GO

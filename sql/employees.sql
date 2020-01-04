@@ -9,7 +9,6 @@ create table employees
         PRIMARY KEY (id)
 );
 go
-
 create UNIQUE INDEX uniq_employee
     on employees (job_number, name)
 GO

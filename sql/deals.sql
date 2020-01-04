@@ -12,7 +12,6 @@ create table deals
         PRIMARY KEY (id)
 );
 go
-
 create UNIQUE INDEX uniq_deal
     on deals (deal_time)
 GO

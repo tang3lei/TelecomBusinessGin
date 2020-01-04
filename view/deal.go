@@ -1,7 +1,6 @@
 package view
 
 import (
-	"fmt"
 	"github.com/gin-gonic/gin"
 	"time"
 	"upc.edu.cn/telecom_business/telecom_business_api/dal/db"
@@ -124,7 +123,6 @@ func UserDailyDeals(c *gin.Context) {
 		caL = append(caL, b.Format("2006-01-02"))
 		b = b.AddDate(0, 0, 1)
 	}
-	fmt.Println("adasadasdad")
 	var srLs []tempRes
 	for number, list := range pnMp {
 		sr := tempRes{
@@ -149,8 +147,6 @@ func UserDailyDeals(c *gin.Context) {
 		}
 		srLs = append(srLs, sr)
 	}
-	fmt.Println("adasadasdad")
-
 	SendSucResp(c, map[string]interface{}{
 		"ca":   caL,
 		"srls": srLs,

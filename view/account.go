@@ -151,6 +151,11 @@ func UseAccountBalance(c *gin.Context) {
 		return
 	}
 	account.Balance -= resNum
+	if account.Balance < 0 {
+		SendErrResp(c,1,"余额不足")
+		action.Rollback()
+		return
+	}
 	err = db.Account().Transaction(action).Update(&account)
 	if err != nil {
 		SendErrResp(c, 1, err)

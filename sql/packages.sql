@@ -11,7 +11,6 @@ create table packages
         PRIMARY KEY (id)
 );
 go
-
 create UNIQUE INDEX uniq_package
     on packages (name)
 GO
